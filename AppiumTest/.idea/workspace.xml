@@ -10,19 +10,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="afterclick.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afterclick.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="helloworld.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helloworld.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state relative-caret-position="45">
+              <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -84,7 +77,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -96,10 +88,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,44 +145,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.20 at 12h 22m 14s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 38m 06s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.20 at 12h 24m 14s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 39m 43s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.22 at 17h 45m 56s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 41m 09s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 48m 48s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 42m 22s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 50m 13s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 43m 26s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 50m 42s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 20m 51s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 51m 00s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 23m 15s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 53m 30s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 24m 29s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 57m 45s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 28m 18s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.03.28 at 11h 58m 52s.xml">
+    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 29m 12s.xml">
       <configuration name="Unittests in helloworld.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="767" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.95395684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -213,6 +206,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/afterclick.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afterclick.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helloworld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helloworld.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -262,10 +285,15 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enterFilter.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helloworld.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="45">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
