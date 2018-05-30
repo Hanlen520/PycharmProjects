@@ -1,6 +1,6 @@
 import unittest
 from appium import webdriver
-
+# 滑动引导页进入app
 class filterTest(unittest.TestCase):
     def test_enterFilter(self):
         desired_caps = {}
