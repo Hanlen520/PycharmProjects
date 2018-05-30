@@ -11,11 +11,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="helloworld.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helloworld.py">
+      <file leaf-file-name="filterTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/filterTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unlockTest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/unlockTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -36,6 +48,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/helloworld.py" />
+        <option value="$PROJECT_DIR$/filterTest.py" />
+        <option value="$PROJECT_DIR$/unlockTest.py" />
       </list>
     </option>
   </component>
@@ -77,6 +91,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,7 +103,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -107,8 +121,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Unittests in helloworld.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests in unlockTest.py">
+    <configuration name="Unittests in filterTest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -119,12 +133,31 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AppiumTest" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/helloworld.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/filterTest.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="Unittests in unlockTest.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AppiumTest" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/unlockTest.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in filterTest.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in unlockTest.py" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in helloworld.py" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in unlockTest.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in filterTest.py" />
       </list>
     </recent_temporary>
   </component>
@@ -145,41 +178,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 38m 06s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.25 at 16h 18m 22s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 39m 43s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.25 at 16h 21m 12s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 41m 09s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.29 at 15h 48m 24s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 42m 22s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.29 at 15h 49m 00s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 18h 43m 26s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.29 at 15h 50m 21s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 20m 51s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.30 at 10h 30m 24s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 23m 15s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.30 at 10h 31m 27s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 24m 29s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.30 at 10h 33m 27s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 28m 18s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.30 at 10h 35m 34s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_helloworld_py - 2018.05.24 at 19h 29m 12s.xml">
-      <configuration name="Unittests in helloworld.py" configurationId="tests" />
+    <history-entry file="Unittests_in_unlockTest_py - 2018.05.30 at 11h 15m 48s.xml">
+      <configuration name="Unittests in unlockTest.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="767" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.95395684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -206,12 +240,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/afterclick.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/unlockTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afterclick.png" />
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
@@ -221,12 +271,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afterclick.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/afterclick.png" />
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
@@ -236,7 +282,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -246,7 +292,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -256,7 +302,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -280,20 +326,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afterclick.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enterFilter.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helloworld.py">
+    <entry file="file://$PROJECT_DIR$/afterclick.png" />
+    <entry file="file://$PROJECT_DIR$/enterFilter.png" />
+    <entry file="file:///usr/local/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state relative-caret-position="1160">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filterTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unlockTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
