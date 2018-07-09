@@ -5,6 +5,9 @@ import unittest
 screenshot_path = '/Users/a140/Desktop/ScreenShotOfNetease/'
 
 
+# 网易云音乐签到
+
+
 class AppTask(unittest.TestCase):
 
     def basic(app_path):
