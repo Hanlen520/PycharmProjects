@@ -1,6 +1,0 @@
-platformName=Android
-platformVersion=4.4.4
-app=/Users/a140/Downloads/filter-点传-0518.apk
-appWaitActivity=com.eyefilter.night.activity.GuideActivity
-deviceName=03083025d0250909
-remoteHost=http://127.0.0.1:4723/wd/hub
