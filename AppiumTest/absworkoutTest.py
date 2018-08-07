@@ -32,6 +32,24 @@ class AbsWorkoutTest(unittest.TestCase):
         for i in range(n):
             self.driver.swipe(x1, y1, x1, y2, t)
 
+    def swipeUpToCla(self, t=1000, n=1):
+        '''向上滑动屏幕'''
+        l = self.driver.get_window_size()
+        x1 = l['width'] * 0.5  # x坐标
+        y1 = l['height'] * 0.75  # 起始y坐标
+        y2 = l['height'] * 0.25  # 终点y坐标
+        for i in range(n):
+            self.driver.swipe(x1, y1, x1, y2, t)
+
+    def swipeUpToTab(self, t=200, n=1):
+        '''向上滑动屏幕'''
+        l = self.driver.get_window_size()
+        x1 = l['width'] * 0.5  # x坐标
+        y1 = l['height'] * 0.75  # 起始y坐标
+        y2 = l['height'] * 0.25  # 终点y坐标
+        for i in range(n):
+            self.driver.swipe(x1, y1, x1, y2, t)
+
     def swipeDown(self, t=500, n=1):
         '''向下滑动屏幕'''
         l = self.driver.get_window_size()
@@ -59,147 +77,196 @@ class AbsWorkoutTest(unittest.TestCase):
         for i in range(n):
             self.driver.swipe(x1, y1, x2, y1, t)
 
-    # 初次打开app
-    def test_enter_choice_item(self):
-        item_button = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/item_button")
-        item_button[2].click()
-        sleep(2)
-        next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
-        next.click()
-        sleep(2)
-        start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
-        start.click()
+    def sh(self, command):
+        p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        print(p.stdout.read())
 
-    # 去除广告
-    def test_setting_ad(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        remove_ad = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
-                                                   "setting_item_premium_entry")
-        remove_ad.click()
-        sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/after_click_remove_ad.png')
-        remove_ad_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/iv_close")
-        remove_ad_close.click()
+    def test_class_ui_classic(self):
+        self.swipeUpToCla()
+        enter_classic = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+        enter_classic.click()
+        sleep(2)
+        button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+        button_go.click()
+        sleep(2)
+        Shoulders = self.driver.find_element_by_android_uiautomator(
+            'new UiSelector().text("Shoulders Stretch with Rotation")')
+        Shoulders.click()
+        sleep(2)
+        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/classic/shoulders.png')
+        self.sh('adb shell input keyevent 4')
+        sleep(2)
+        jump = self.driver.find_element_by_android_uiautomator(
+            'new UiSelector().text("Jump Left and Right")')
+        jump.click()
+        sleep(2)
+        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/classic/jump.png')
+        self.sh('adb shell input keyevent 4')
+        sleep(2)
+        reverse = self.driver.find_element_by_android_uiautomator(
+            'new UiSelector().text("Reverse Crunches")')
+        reverse.click()
+        sleep(2)
+        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/classic/reverse.png')
+        self.sh('adb shell input keyevent 4')
 
-    # 添加提醒
-    def test_setting_reminder_add(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        add_reminder = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/add_tag")
-        add_reminder.click()
-        reminder_label = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
-        reminder_label.click()
-        label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
-        label_list[2].click()
-        repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
-        repeat_day[0].click()
-        save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
-        save.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_add.png')
 
-    # 关闭提醒
-    def test_setting_reminder_off(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
-        switch_reminder[0].click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_off.png')
 
-    # 打开提醒
-    def test_setting_reminder_on(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
-        switch_reminder[0].click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_on.png')
+    # def test_class_ui_hiit(self):
+    #     self.swipeUp()
+    #     enter_hiit = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+    #     enter_hiit[1].click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/hiit.png')
+    #
+    # def test_class_ui_tabata(self):
+    #     self.swipeUpToTab()
+    #     enter_tabata = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+    #     enter_tabata[1].click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/tabata.png')
 
-    # 删除提醒
-    def test_setting_reminder_delete(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
-        reminder_list[0].click()
-        sleep(2)
-        self.swipeUp()
-        button_delete = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_delete_btn")
-        button_delete.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/delete_done.png')
-
-    # 修改提醒
-    def test_setting_reminder_update(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
-        reminder_list[0].click()
-        reminder_label = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
-        reminder_label.click()
-        label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
-        label_list[1].click()
-        reminder_time = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_time")
-        reminder_time.click()
-        sleep(1)
-        button_ok = self.driver.find_element_by_id("android:id/button1")
-        button_ok.click()
-        self.swipeUp()
-        repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
-        repeat_day[3].click()
-        repeat_day[4].click()
-        repeat_day[5].click()
-        repeat_day[6].click()
-        save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
-        save.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_update.png')
-
-    # 反馈意见
-    def test_setting_feedback(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        self.swipeUp()
-        sleep(2)
-        feedback = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/feedback")
-        feedback.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/feedback.png')
-
-    # 分享应用
-    def test_setting_share(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        self.swipeUp()
-        sleep(2)
-        share = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/share")
-        share.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/share.png')
-
-    # 隐私政策
-    def test_setting_privacy(self):
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        self.swipeUp()
-        sleep(2)
-        privacy = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
-                                                 "view_setting_item_privacy_policy")
-        privacy.click()
-        sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/privacy.png')
-
-    # 版本号
-    def test_setting_version(self):
-        version = "1.6.1"
-        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-        setting.click()
-        self.swipeUp()
-        sleep(2)
-        versionText = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/version")
-        self.assertEqual(versionText.text, version)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/version.png')
+    # # 初次打开app
+    # def test_enter_choice_item(self):
+    #     item_button = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/item_button")
+    #     item_button[2].click()
+    #     sleep(2)
+    #     next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
+    #     next.click()
+    #     sleep(2)
+    #     start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
+    #     start.click()
+    #
+    # # 去除广告
+    # def test_setting_ad(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     remove_ad = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
+    #                                                "setting_item_premium_entry")
+    #     remove_ad.click()
+    #     sleep(1)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/after_click_remove_ad.png')
+    #     remove_ad_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/iv_close")
+    #     remove_ad_close.click()
+    #
+    # # 添加提醒
+    # def test_setting_reminder_add(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     add_reminder = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/add_tag")
+    #     add_reminder.click()
+    #     reminder_label = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
+    #     reminder_label.click()
+    #     label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
+    #     label_list[2].click()
+    #     repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
+    #     repeat_day[0].click()
+    #     save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
+    #     save.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_add.png')
+    #
+    # # 关闭提醒
+    # def test_setting_reminder_off(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
+    #     switch_reminder[0].click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_off.png')
+    #
+    # # 打开提醒
+    # def test_setting_reminder_on(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
+    #     switch_reminder[0].click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_on.png')
+    #
+    # # 删除提醒
+    # def test_setting_reminder_delete(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
+    #     reminder_list[0].click()
+    #     sleep(2)
+    #     self.swipeUp()
+    #     button_delete = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_delete_btn")
+    #     button_delete.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/delete_done.png')
+    #
+    # # 修改提醒
+    # def test_setting_reminder_update(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
+    #     reminder_list[0].click()
+    #     reminder_label = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
+    #     reminder_label.click()
+    #     label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
+    #     label_list[1].click()
+    #     reminder_time = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_time")
+    #     reminder_time.click()
+    #     sleep(1)
+    #     button_ok = self.driver.find_element_by_id("android:id/button1")
+    #     button_ok.click()
+    #     self.swipeUp()
+    #     repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
+    #     repeat_day[3].click()
+    #     repeat_day[4].click()
+    #     repeat_day[5].click()
+    #     repeat_day[6].click()
+    #     save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
+    #     save.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/reminder_update.png')
+    #
+    # # 反馈意见
+    # def test_setting_feedback(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     self.swipeUp()
+    #     sleep(2)
+    #     feedback = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/feedback")
+    #     feedback.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/feedback.png')
+    #
+    # # 分享应用
+    # def test_setting_share(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     self.swipeUp()
+    #     sleep(2)
+    #     share = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/share")
+    #     share.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/share.png')
+    #
+    # # 隐私政策
+    # def test_setting_privacy(self):
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     self.swipeUp()
+    #     sleep(2)
+    #     privacy = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
+    #                                              "view_setting_item_privacy_policy")
+    #     privacy.click()
+    #     sleep(2)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/privacy.png')
+    #
+    # # 版本号
+    # def test_setting_version(self):
+    #     version = "1.6.1"
+    #     setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+    #     setting.click()
+    #     self.swipeUp()
+    #     sleep(2)
+    #     versionText = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/version")
+    #     self.assertEqual(versionText.text, version)
+    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/version.png')
 
 
 if __name__ == '__main__':
