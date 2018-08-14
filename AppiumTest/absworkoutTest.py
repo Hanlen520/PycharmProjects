@@ -41,7 +41,7 @@ class AbsWorkoutTest(unittest.TestCase):
         for i in range(n):
             self.driver.swipe(x1, y1, x1, y2, t)
 
-    def swipeUpToTab(self, t=200, n=1):
+    def swipeUpToTab(self, t=100, n=1):
         '''向上滑动屏幕'''
         l = self.driver.get_window_size()
         x1 = l['width'] * 0.5  # x坐标
@@ -130,53 +130,155 @@ class AbsWorkoutTest(unittest.TestCase):
     #                                            '.png')
     #         loop_num = loop_num + 1
 
-    def test_class_hiit(self):
-        self.swipeUp()
-        enter_hiit = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-        enter_hiit[1].click()
+    # def test_class_hiit(self):
+    #     self.swipeUp()
+    #     enter_hiit = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+    #     enter_hiit[1].click()
+    #     sleep(2)
+    #     # self.driver.get_screenshot_as_file('/Users/a140/Desktop/hiit.png')
+    #     loop_num = 0
+    #     while loop_num < 28:
+    #         button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+    #         button_go.click()
+    #         sleep(2)
+    #         button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+    #         button_go2.click()
+    #         sleep(2)
+    #         count = 0
+    #         while count < 13:
+    #             # noinspection PyBroadException
+    #             try:
+    #                 exercise_name = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
+    #                                                                "exercise_name")
+    #                 if 7 <= loop_num <= 13:
+    #                     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage2/' +
+    #                                                        str(count) + exercise_name.text + '.png')
+    #                 elif 14 <= loop_num <= 20:
+    #                     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage3/' +
+    #                                                        str(count) + exercise_name.text + '.png')
+    #                 elif 21 <= loop_num <= 27:
+    #                     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage4/' +
+    #                                                        str(count) + exercise_name.text + '.png')
+    #                 else:
+    #                     self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage1/' +
+    #                                                        str(count) + exercise_name.text + '.png')
+    #             except:
+    #                 self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/bug/'
+    #                                                    + 'num' + str(loop_num + 1) + 'index' + str(count + 1) + '.png')
+    #                 button_ok = self.driver.find_element_by_id("android:id/button1")
+    #                 button_ok.click()
+    #                 sleep(1)
+    #                 self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/bug/'
+    #                                                    + 'num' + str(loop_num + 1) + 'index' + str(count + 1) + '2.png')
+    #             button_next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_next")
+    #             button_next.click()
+    #             sleep(2)
+    #             count = count + 1
+    #         if 7 <= loop_num <= 13:
+    #             self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage2/' + '14' +
+    #                                                exercise_name.text + '.png')
+    #         elif 14 <= loop_num <= 20:
+    #             self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage3/' + '14' +
+    #                                                exercise_name.text + '.png')
+    #         elif 21 <= loop_num <= 27:
+    #             self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage4/' + '14' +
+    #                                                exercise_name.text + '.png')
+    #         else:
+    #             self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage1/' + '14' +
+    #                                                exercise_name.text + '.png')
+    #         sleep(40)
+    #         # noinspection PyBroadException
+    #         try:
+    #             button_cancel = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_cancel")
+    #             button_cancel.click()
+    #         except:
+    #             pass
+    #         sleep(2)
+    #         self.sh('adb shell input keyevent 4')
+    #         sleep(2)
+    #         # self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/' + str(loop_num) +
+    #         #                                    '.png')
+    #         loop_num = loop_num + 1
+
+    # 遍历课程tabata
+    def test_class_tabata(self):
+        self.swipeUpToTab()
+        enter_tabata = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+        enter_tabata[1].click()
         sleep(2)
-        # self.driver.get_screenshot_as_file('/Users/a140/Desktop/hiit.png')
+        title_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/title_tv")
+        self.assertEqual(title_text.text, "TABATA", "进入tabata课程错误")
         loop_num = 0
         while loop_num < 28:
-            button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-            button_go.click()
+            # noinspection PyBroadException
+            try:
+                button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+                button_go.click()
+            except:
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/button_go_error.png')
+                pass
             sleep(2)
-            button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
-            button_go2.click()
+            try:
+                button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+                button_go2.click()
+            except:
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/button_go2_error.png')
+                pass
             sleep(2)
             count = 0
-            while count < 13:
-                exercise_name = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
-                                                               "exercise_name")
-                if 7 <= loop_num <= 13:
-                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage2/' +
-                                                       str(count) + exercise_name.text + '.png')
-                elif 14 <= loop_num <= 20:
-                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage3/' +
-                                                       str(count) + exercise_name.text + '.png')
-                elif 21 <= loop_num <= 27:
-                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage4/' +
-                                                       str(count) + exercise_name.text + '.png')
-                else:
-                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage1/' +
-                                                       str(count) + exercise_name.text + '.png')
+            while count < 7:
+                # noinspection PyBroadException
+                try:
+                    exercise_name = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
+                                                                   "exercise_name")
+                    if 7 <= loop_num <= 13:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage2/' +
+                                                           str(count + 1) + exercise_name.text + '.png')
+                    elif 14 <= loop_num <= 20:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage3/' +
+                                                           str(count + 1) + exercise_name.text + '.png')
+                    elif 21 <= loop_num <= 27:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage4/' +
+                                                           str(count + 1) + exercise_name.text + '.png')
+                    else:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage1/' +
+                                                           str(count + 1) + exercise_name.text + '.png')
+                except:
+                    if 7 <= loop_num <= 13:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
+                                                           + 'stage2' + 'index' + str(count + 1) + '.png')
+                    elif 14 <= loop_num <= 20:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
+                                                           + 'stage3' + 'index' + str(count + 1) + '.png')
+                    elif 21 <= loop_num <= 27:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
+                                                           + 'stage4' + 'index' + str(count + 1) + '.png')
+                    else:
+                        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
+                                                           + 'stage1' + 'index' + str(count + 1) + '.png')
+                    button_ok = self.driver.find_element_by_id("android:id/button1")
+                    button_ok.click()
+                    sleep(1)
+                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
+                                                       + 'num' + str(loop_num + 1) + 'index' + str(count + 1) + '2.png')
                 button_next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_next")
                 button_next.click()
                 sleep(2)
                 count = count + 1
             if 7 <= loop_num <= 13:
-                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage2/' + '14' +
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage2/' + '8' +
                                                    exercise_name.text + '.png')
             elif 14 <= loop_num <= 20:
-                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage3/' + '14' +
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage3/' + '8' +
                                                    exercise_name.text + '.png')
             elif 21 <= loop_num <= 27:
-                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage4/' + '14' +
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage4/' + '8' +
                                                    exercise_name.text + '.png')
             else:
-                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/stage1/' + '14' +
+                self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/stage1/' + '8' +
                                                    exercise_name.text + '.png')
             sleep(40)
+            # noinspection PyBroadException
             try:
                 button_cancel = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_cancel")
                 button_cancel.click()
@@ -185,17 +287,7 @@ class AbsWorkoutTest(unittest.TestCase):
             sleep(2)
             self.sh('adb shell input keyevent 4')
             sleep(2)
-            # self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/hiit/' + str(loop_num) +
-            #                                    '.png')
             loop_num = loop_num + 1
-
-
-    # def test_class_ui_tabata(self):
-    #     self.swipeUpToTab()
-    #     enter_tabata = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-    #     enter_tabata[1].click()
-    #     sleep(2)
-    #     self.driver.get_screenshot_as_file('/Users/a140/Desktop/tabata.png')
 
 
 
