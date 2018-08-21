@@ -185,21 +185,11 @@ class AbsWorkoutTest(unittest.TestCase):
         loop_num = 0
         while loop_num < 28:
             # noinspection PyBroadException
-            try:
-                button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-                button_go.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/classic/bug/button_go_error.png')
-                pass
+            button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+            button_go.click()
             sleep(2)
-            try:
-                button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
-                button_go2.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/classic/bug/button_go2_error.png')
-                pass
+            button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+            button_go2.click()
             sleep(2)
             count = 0
             while count < 13:
@@ -241,21 +231,11 @@ class AbsWorkoutTest(unittest.TestCase):
         loop_num = 0
         while loop_num < 28:
             # noinspection PyBroadException
-            try:
-                button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-                button_go.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/hiit/bug/button_go_error.png')
-                pass
+            button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+            button_go.click()
             sleep(2)
-            try:
-                button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
-                button_go2.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/hiit/bug/button_go2_error.png')
-                pass
+            button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+            button_go2.click()
             sleep(2)
             count = 0
             while count < 13:
@@ -298,21 +278,11 @@ class AbsWorkoutTest(unittest.TestCase):
         loop_num = 0
         while loop_num < 28:
             # noinspection PyBroadException
-            try:
-                button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-                button_go.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/tabata/bug/button_go_error.png')
-                pass
+            button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+            button_go.click()
             sleep(2)
-            try:
-                button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
-                button_go2.click()
-            except:
-                self.driver.get_screenshot_as_file(
-                    '/Users/a140/Desktop/screenshot_absworkout/tabata/bug/button_go2_error.png')
-                pass
+            button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+            button_go2.click()
             sleep(2)
             count = 0
             while count < 7:
