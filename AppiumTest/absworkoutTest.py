@@ -1,7 +1,11 @@
+# -*- coding: UTF-8 -*-
+
 import subprocess
 import unittest
+import time
 from time import sleep
 from appium import webdriver
+import HtmlTestRunner
 
 
 class AbsWorkoutTest(unittest.TestCase):
@@ -758,7 +762,7 @@ class AbsWorkoutTest(unittest.TestCase):
         except:
             self.driver.get_screenshot_as_file(
                 '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_item_button_error.png')
-            pass
+            # pass
         sleep(2)
         try:
             next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
@@ -766,7 +770,7 @@ class AbsWorkoutTest(unittest.TestCase):
         except:
             self.driver.get_screenshot_as_file(
                 '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_next_error.png')
-            pass
+            # pass
         sleep(2)
         try:
             start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
@@ -774,7 +778,7 @@ class AbsWorkoutTest(unittest.TestCase):
         except:
             self.driver.get_screenshot_as_file(
                 '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_start_error.png')
-            pass
+            # pass
 
     # 设置页-去除广告
     def test_setting_ad(self):
@@ -999,55 +1003,54 @@ class AbsWorkoutTest(unittest.TestCase):
         self.assertEqual(version_text.text, version)
         self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/version.png')
 
-    # 课程学习
-    def suite_class(self):
-        suite = unittest.TestSuite()
-        suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
-        suite.addTest(AbsWorkoutTest('test_class_list_classic_preview'))
-        suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
-        suite.addTest(AbsWorkoutTest('test_class_video_pause'))
-        suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
-        suite.addTest(AbsWorkoutTest('test_class_video_sound'))
-        suite.addTest(AbsWorkoutTest('test_class_video_close'))
-        suite.addTest(AbsWorkoutTest('test_class_pause'))
-        suite.addTest(AbsWorkoutTest('test_class_exit_close'))
-        suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
-        suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
-        suite.addTest(AbsWorkoutTest('test_class_done'))
-        suite.addTest(AbsWorkoutTest('test_class_done_weight'))
-        suite.addTest(AbsWorkoutTest('test_class_done_again'))
-        suite.addTest(AbsWorkoutTest('test_class_done_share'))
-        return suite
 
-    # 设置页
-    def suite_setting(self):
-        suite = unittest.TestSuite()
-        suite.addTest(AbsWorkoutTest('test_enter_choice_item'))
-        suite.addTest(AbsWorkoutTest('test_setting_ad'))
-        suite.addTest(AbsWorkoutTest('test_setting_reminder_add'))
-        suite.addTest(AbsWorkoutTest('test_setting_reminder_off'))
-        suite.addTest(AbsWorkoutTest('test_setting_reminder_on'))
-        suite.addTest(AbsWorkoutTest('test_setting_reminder_delete'))
-        suite.addTest(AbsWorkoutTest('test_setting_reminder_update'))
-        suite.addTest(AbsWorkoutTest('test_setting_feedback'))
-        suite.addTest(AbsWorkoutTest('test_setting_share'))
-        suite.addTest(AbsWorkoutTest('test_setting_privacy'))
-        suite.addTest(AbsWorkoutTest('test_setting_version'))
-        return suite
-
-    # 遍历所有课程
-    def suite_class_all(self):
-        suite = unittest.TestSuite()
-        suite.addTest(AbsWorkoutTest('test_class_classic'))
-        suite.addTest(AbsWorkoutTest('test_class_hiit'))
-        suite.addTest(AbsWorkoutTest('test_class_tabata'))
-        return suite
-
-    if __name__ == '__main__':
-        runner = unittest.TextTestRunner(failfast=True)
-        runner.run(suite_class_all())
+# 课程学习
+def suite_class():
+    suite = unittest.TestSuite()
+    suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
+    suite.addTest(AbsWorkoutTest('test_class_list_classic_preview'))
+    suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
+    suite.addTest(AbsWorkoutTest('test_class_video_pause'))
+    suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
+    suite.addTest(AbsWorkoutTest('test_class_video_sound'))
+    suite.addTest(AbsWorkoutTest('test_class_video_close'))
+    suite.addTest(AbsWorkoutTest('test_class_pause'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_close'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
+    suite.addTest(AbsWorkoutTest('test_class_done'))
+    suite.addTest(AbsWorkoutTest('test_class_done_weight'))
+    suite.addTest(AbsWorkoutTest('test_class_done_again'))
+    suite.addTest(AbsWorkoutTest('test_class_done_share'))
+    return suite
 
 
-# if __name__ == '__main__':
-#     suite = unittest.TestLoader().loadTestsFromTestCase(AbsWorkoutTest)
-#     unittest.TextTestRunner(verbosity=2).run(suite)
+# 遍历所有课程
+def suite_class_all():
+    suite = unittest.TestSuite()
+    suite.addTest(AbsWorkoutTest('test_class_classic'))
+    suite.addTest(AbsWorkoutTest('test_class_hiit'))
+    suite.addTest(AbsWorkoutTest('test_class_tabata'))
+    return suite
+
+
+# 设置页
+def suite_setting():
+    suite = unittest.TestSuite()
+    suite.addTest(AbsWorkoutTest('test_enter_choice_item'))
+    suite.addTest(AbsWorkoutTest('test_setting_ad'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_add'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_off'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_on'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_delete'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_update'))
+    suite.addTest(AbsWorkoutTest('test_setting_feedback'))
+    suite.addTest(AbsWorkoutTest('test_setting_share'))
+    suite.addTest(AbsWorkoutTest('test_setting_privacy'))
+    suite.addTest(AbsWorkoutTest('test_setting_version'))
+    return suite
+
+
+if __name__ == '__main__':
+    runner = HtmlTestRunner.HTMLTestRunner(output='report_absworkout')
+    runner.run(suite_class())
