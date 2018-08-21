@@ -9,6 +9,18 @@ import HtmlTestRunner
 
 class AbsWorkoutTest(unittest.TestCase):
 
+    SCREEN_SHOT_PATH = '/Users/a140/Desktop/screenshot_absworkout/'
+    SCREEN_SHOT_CLASS_LIST = '/Users/a140/Desktop/screenshot_absworkout/class/list/'
+    SCREEN_SHOT_CLASS_DONE = '/Users/a140/Desktop/screenshot_absworkout/class/done/'
+    SCREEN_SHOT_CLASS_EXIT = '/Users/a140/Desktop/screenshot_absworkout/class/exit/'
+    SCREEN_SHOT_CLASS_PAUSE = '/Users/a140/Desktop/screenshot_absworkout/class/pause/'
+    SCREEN_SHOT_CLASS_PREVIEW = '/Users/a140/Desktop/screenshot_absworkout/class/preview/'
+    SCREEN_SHOT_CLASS_UI = '/Users/a140/Desktop/screenshot_absworkout/class/ui/'
+    SCREEN_SHOT_CLASS_VIDEO = '/Users/a140/Desktop/screenshot_absworkout/class/video/'
+    SCREEN_SHOT_CLASS_BUG = '/Users/a140/Desktop/screenshot_absworkout/class/bug/'
+    SCREEN_SHOT_SETTING_BUG = '/Users/a140/Desktop/screenshot_absworkout/setting/bug/'
+    SCREEN_SHOT_SETTING = '/Users/a140/Desktop/screenshot_absworkout/setting/'
+
     def setUp(self):
         desired_caps = {}
         desired_caps['platformName'] = 'Android'
@@ -103,46 +115,46 @@ class AbsWorkoutTest(unittest.TestCase):
     # 获取bug截图
     def get_bug_screenshot(self, loop_num, class_name, count):
         if 7 <= loop_num <= 13:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/' +
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/' +
                                                'bug/stage2' + 'index' + str(count + 1) + '.png')
         elif 14 <= loop_num <= 20:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/' +
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/' +
                                                'bug/stage3' + 'index' + str(count + 1) + '.png')
         elif 21 <= loop_num <= 27:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/' +
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/' +
                                                'bug/stage4' + 'index' + str(count + 1) + '.png')
         else:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/' +
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/' +
                                                'bug/stage1' + 'index' + str(count + 1) + '.png')
 
     # 获取课程最后动作的截图
     def get_last_action_screenshot(self, loop_num, class_name, exercise_name, last_num):
         if 7 <= loop_num <= 13:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage2/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage2/'
                                                + str(last_num) + exercise_name.text + '.png')
         elif 14 <= loop_num <= 20:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage3/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage3/'
                                                + str(last_num) + exercise_name.text + '.png')
         elif 21 <= loop_num <= 27:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage4/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage4/'
                                                + str(last_num) + exercise_name.text + '.png')
         else:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage1/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage1/'
                                                + str(last_num) + exercise_name.text + '.png')
 
     # 获取课程动作截图
     def get_action_screenshot(self, loop_num, class_name, exercise_name, count):
         if 7 <= loop_num <= 13:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage2/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage2/'
                                                + str(count + 1) + exercise_name.text + '.png')
         elif 14 <= loop_num <= 20:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage3/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage3/'
                                                + str(count + 1) + exercise_name.text + '.png')
         elif 21 <= loop_num <= 27:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage4/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage4/'
                                                + str(count + 1) + exercise_name.text + '.png')
         else:
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/' + class_name + '/stage1/'
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + class_name + '/stage1/'
                                                + str(count + 1) + exercise_name.text + '.png')
 
     # 课程学习-课程视频页-进入课程classic
@@ -431,7 +443,7 @@ class AbsWorkoutTest(unittest.TestCase):
     # 课程学习-课程列表页-点击"Go"
     def test_class_list_classic_go(self):
         self.enter_class_video_classic()
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/list/go.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_LIST + 'go.png')
 
     # 课程学习-课程列表页-点击动作预览
     def test_class_list_classic_preview(self):
@@ -446,7 +458,7 @@ class AbsWorkoutTest(unittest.TestCase):
             'new UiSelector().text("Shoulders Stretch with Rotation")')
         Shoulders.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/list/preview.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_LIST + 'preview.png')
 
     # 课程学习-课程视频页-点击底部前后箭头
     def test_class_video_arrows(self):
@@ -454,11 +466,11 @@ class AbsWorkoutTest(unittest.TestCase):
         button_next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_next")
         button_next.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/arrows_two.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'arrows_two.png')
         button_back = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/turn_back")
         button_back.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/arrows_one.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'arrows_one.png')
 
     # 课程学习-课程视频页-点击暂停按钮
     def test_class_video_pause(self):
@@ -466,7 +478,7 @@ class AbsWorkoutTest(unittest.TestCase):
         pause = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/exercise_progress")
         pause.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/pause.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'pause.png')
 
     # 课程学习-课程视频页-底部音符按钮
     def test_class_video_bgm(self):
@@ -475,10 +487,10 @@ class AbsWorkoutTest(unittest.TestCase):
         bgm = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/bgm_play_image")
         bgm.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/bgm_off.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'bgm_off.png')
         bgm.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/bgm_on.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'bgm_on.png')
 
     # 课程学习-课程视频页-扬声器按钮
     def test_class_video_sound(self):
@@ -487,10 +499,10 @@ class AbsWorkoutTest(unittest.TestCase):
         sound = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/sound_play_image")
         sound.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/sound_off.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'sound_off.png')
         sound.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/sound_on.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'sound_on.png')
 
     # 课程学习-课程视频页-点击系统返回键/页面返回键
     def test_class_video_close(self):
@@ -498,7 +510,7 @@ class AbsWorkoutTest(unittest.TestCase):
         button_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_close")
         button_close.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/video/close.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_VIDEO + 'close.png')
 
     # 课程学习-动作暂停页
     def test_class_pause(self):
@@ -506,7 +518,7 @@ class AbsWorkoutTest(unittest.TestCase):
         button_resume = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnResume")
         button_resume.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/pause/resume.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_PAUSE + 'resume.png')
 
     # 课程学习-退出运动弹框-关闭
     def test_class_exit_close(self):
@@ -514,7 +526,7 @@ class AbsWorkoutTest(unittest.TestCase):
         button_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_close")
         button_close.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/exit/close.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_EXIT + 'close.png')
 
     # 课程学习-退出运动弹框-退出运动
     def test_class_exit_quit(self):
@@ -522,7 +534,7 @@ class AbsWorkoutTest(unittest.TestCase):
         button_quit = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnQuit")
         button_quit.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/exit/quit.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_EXIT + 'quit.png')
 
     # 课程学习-退出运动弹框-休息一会儿
     def test_class_exit_snooze(self):
@@ -530,19 +542,19 @@ class AbsWorkoutTest(unittest.TestCase):
         button_snooze = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnSnooze")
         button_snooze.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/exit/snooze.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_EXIT + 'snooze.png')
 
     # 课程学习-运动完成页
     def test_class_done(self):
         self.enter_class_video_classic()
         count = 0
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/done/' + str(count) + '.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_DONE + str(count) + '.png')
         while count < 13:
             button_next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_next")
             button_next.click()
             sleep(2)
             count = count + 1
-            self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/done/' + str(count) + '.png')
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_DONE + str(count) + '.png')
         sleep(40)
 
     # 课程学习-运动完成页-添加/修改体重
@@ -576,14 +588,12 @@ class AbsWorkoutTest(unittest.TestCase):
             self.assertIn('70', current_weight.text, '体重添加修改失败！')
         except Exception as msg:
             print(msg)
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/weight_error.png')
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_BUG + 'weight_error.png')
         try:
             self.assertIn('180', current_height.text, '身高添加修改失败！')
         except Exception as msg:
             print(msg)
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/height_error.png')
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_BUG + 'height_error.png')
 
     # 课程学习-运动完成页-再来一次
     def test_class_done_again(self):
@@ -597,7 +607,7 @@ class AbsWorkoutTest(unittest.TestCase):
         again = self.driver.find_element_by_android_uiautomator('new UiSelector().text("Once again")')
         again.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/class/done/again.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_CLASS_DONE + 'again.png')
 
     # 课程学习-运动完成页-分享
     def test_class_done_share(self):
@@ -634,7 +644,7 @@ class AbsWorkoutTest(unittest.TestCase):
                                                    "setting_item_premium_entry")
         remove_ad.click()
         sleep(1)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/after_click_remove_ad.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'after_click_remove_ad.png')
         # 点击关闭
         remove_ad_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/iv_close")
         remove_ad_close.click()
@@ -661,9 +671,8 @@ class AbsWorkoutTest(unittest.TestCase):
             self.assertEqual(reminder_text.text, 'TABATA, Mon Tue Wed Thu Fri Sat', '添加提醒错误')
         except Exception as msg:
             print(msg)
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/reminder_add_error.png')
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_add.png')
+            self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING_BUG + 'reminder_add_error.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'reminder_add.png')
 
     # 设置页-关闭提醒
     def test_setting_reminder_off(self):
@@ -672,7 +681,7 @@ class AbsWorkoutTest(unittest.TestCase):
         switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
         switch_reminder[0].click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_off.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'reminder_off.png')
 
     # 设置页-打开提醒
     def test_setting_reminder_on(self):
@@ -681,7 +690,7 @@ class AbsWorkoutTest(unittest.TestCase):
         switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
         switch_reminder[0].click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_on.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'reminder_on.png')
 
     # 设置页-删除提醒
     def test_setting_reminder_delete(self):
@@ -695,7 +704,7 @@ class AbsWorkoutTest(unittest.TestCase):
             "abs.workout.fitness.tabata.hiit.stomach:id/reminder_delete_btn")
         button_delete.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/delete_done.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'delete_done.png')
 
     # 设置页-修改提醒
     def test_setting_reminder_update(self):
@@ -723,7 +732,7 @@ class AbsWorkoutTest(unittest.TestCase):
         sleep(2)
         reminder_update_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
         self.assertEqual(reminder_update_text.text, 'HIIT, Mon Tue ', '修改提醒错误')
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_update.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'reminder_update.png')
 
     # 设置页-反馈意见
     def test_setting_feedback(self):
@@ -734,7 +743,7 @@ class AbsWorkoutTest(unittest.TestCase):
         feedback = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/feedback")
         feedback.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/feedback.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'feedback.png')
 
     # 设置页-分享应用
     def test_setting_share(self):
@@ -745,7 +754,7 @@ class AbsWorkoutTest(unittest.TestCase):
         share = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/share")
         share.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/share.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'share.png')
 
     # 设置页-隐私政策
     def test_setting_privacy(self):
@@ -757,7 +766,7 @@ class AbsWorkoutTest(unittest.TestCase):
                                                  "view_setting_item_privacy_policy")
         privacy.click()
         sleep(2)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/privacy.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'privacy.png')
 
     # 设置页-版本号
     def test_setting_version(self):
@@ -768,7 +777,7 @@ class AbsWorkoutTest(unittest.TestCase):
         sleep(2)
         version_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/version")
         self.assertEqual(version_text.text, version)
-        self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/version.png')
+        self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'version.png')
 
 
 # 课程学习
