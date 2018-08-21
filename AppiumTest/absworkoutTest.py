@@ -2,7 +2,6 @@
 
 import subprocess
 import unittest
-import time
 from time import sleep
 from appium import webdriver
 import HtmlTestRunner
@@ -149,29 +148,14 @@ class AbsWorkoutTest(unittest.TestCase):
     # 课程学习-课程视频页-进入课程classic
     def enter_class_video_classic(self):
         self.swipeUpToCla()
-        try:
-            enter_classic = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-            enter_classic.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_classic_error.png')
-            pass
+        enter_classic = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+        enter_classic.click()
         sleep(2)
-        try:
-            button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
-            button_go.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/button_go_error.png')
-            pass
+        button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
+        button_go.click()
         sleep(2)
-        try:
-            button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
-            button_go2.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/button_go2_error.png')
-            pass
+        button_go2 = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/go_container")
+        button_go2.click()
         sleep(2)
 
     # 遍历课程classic
