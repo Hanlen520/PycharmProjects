@@ -756,106 +756,47 @@ class AbsWorkoutTest(unittest.TestCase):
 
     # 初次打开app
     def test_enter_choice_item(self):
-        try:
-            item_button = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/item_button")
-            item_button[2].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_item_button_error.png')
-            # pass
+        item_button = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/item_button")
+        item_button[2].click()
         sleep(2)
-        try:
-            next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
-            next.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_next_error.png')
-            # pass
+        next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
+        next.click()
         sleep(2)
-        try:
-            start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
-            start.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/class/bug/enter_start_error.png')
-            # pass
+        start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
+        start.click()
 
     # 设置页-去除广告
     def test_setting_ad(self):
-        try:
-            setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-            setting.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/enter_setting_error.png')
-            pass
-        try:
-            remove_ad = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
-                                                       "setting_item_premium_entry")
-            remove_ad.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_remove_ad_error.png')
-            pass
+        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+        setting.click()
+        remove_ad = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/"
+                                                   "setting_item_premium_entry")
+        remove_ad.click()
         sleep(1)
         self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/after_click_remove_ad.png')
+        # 点击关闭
         remove_ad_close = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/iv_close")
         remove_ad_close.click()
 
     # 设置页-添加提醒
     def test_setting_reminder_add(self):
-        try:
-            setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-            setting.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/enter_setting_error.png')
-            pass
-        try:
-            add_reminder = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/add_tag")
-            add_reminder.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_add_reminder_error.png')
-            pass
-        try:
-            reminder_label = self.driver.find_element_by_id(
-                "abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
-            reminder_label.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_reminder_label_error.png')
-            pass
-        try:
-            label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
-            label_list[2].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_label_list_error.png')
-            pass
-        try:
-            repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
-            repeat_day[0].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_repeat_day_error.png')
-            pass
-        try:
-            save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
-            save.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/setting_save_error.png')
-            pass
+        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+        setting.click()
+        add_reminder = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/add_tag")
+        add_reminder.click()
+        reminder_label = self.driver.find_element_by_id(
+            "abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
+        reminder_label.click()
+        label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
+        label_list[2].click()
+        repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
+        repeat_day[0].click()
+        save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
+        save.click()
         sleep(2)
         try:
             global reminder_text
             reminder_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/reminder_text_error.png')
-            pass
-        try:
             self.assertEqual(reminder_text.text, 'TABATA, Mon Tue Wed Thu Fri Sat', '添加提醒错误')
         except Exception as msg:
             print(msg)
@@ -865,68 +806,33 @@ class AbsWorkoutTest(unittest.TestCase):
 
     # 设置页-关闭提醒
     def test_setting_reminder_off(self):
-        try:
-            setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-            setting.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/enter_setting_error.png')
-            pass
-        try:
-            switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
-            switch_reminder[0].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/switch_reminder_error.png')
-            pass
+        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+        setting.click()
+        switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
+        switch_reminder[0].click()
         sleep(2)
         self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_off.png')
 
     # 设置页-打开提醒
     def test_setting_reminder_on(self):
-        try:
-            setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-            setting.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/enter_setting_error.png')
-            pass
-        try:
-            switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
-            switch_reminder[0].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/switch_reminder_error.png')
-            pass
+        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+        setting.click()
+        switch_reminder = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/switch_btn")
+        switch_reminder[0].click()
         sleep(2)
         self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/reminder_on.png')
 
     # 设置页-删除提醒
     def test_setting_reminder_delete(self):
-        try:
-            setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
-            setting.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/enter_setting_error.png')
-            pass
-        try:
-            reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
-            reminder_list[0].click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/reminder_list_error.png')
-            pass
+        setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
+        setting.click()
+        reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
+        reminder_list[0].click()
         sleep(2)
         self.swipeUp()
-        try:
-            button_delete = self.driver.find_element_by_id(
-                "abs.workout.fitness.tabata.hiit.stomach:id/reminder_delete_btn")
-            button_delete.click()
-        except:
-            self.driver.get_screenshot_as_file(
-                '/Users/a140/Desktop/screenshot_absworkout/setting/bug/button_delete_error.png')
-            pass
+        button_delete = self.driver.find_element_by_id(
+            "abs.workout.fitness.tabata.hiit.stomach:id/reminder_delete_btn")
+        button_delete.click()
         sleep(2)
         self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/setting/delete_done.png')
 
