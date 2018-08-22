@@ -829,4 +829,4 @@ def suite_setting():
 
 if __name__ == '__main__':
     runner = HtmlTestRunner.HTMLTestRunner(output='report_absworkout')
-    runner.run(suite_class())
+    runner.run(suite_setting())
