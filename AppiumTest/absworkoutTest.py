@@ -180,7 +180,6 @@ class AbsWorkoutTest(unittest.TestCase):
         self.assertEqual(title_text.text, "CLASSIC", "进入classic课程错误")
         loop_num = 0
         while loop_num < 28:
-            # noinspection PyBroadException
             button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
             button_go.click()
             sleep(2)
@@ -206,6 +205,7 @@ class AbsWorkoutTest(unittest.TestCase):
                 count = count + 1
             self.get_last_action_screenshot(loop_num, 'classic', exercise_name, 14)
             sleep(40)
+            # noinspection PyBroadException
             try:
                 button_cancel = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_cancel")
                 button_cancel.click()
@@ -226,7 +226,6 @@ class AbsWorkoutTest(unittest.TestCase):
         self.assertEqual(title_text.text, "HIIT", "进入hiit课程错误")
         loop_num = 0
         while loop_num < 28:
-            # noinspection PyBroadException
             button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
             button_go.click()
             sleep(2)
@@ -273,7 +272,6 @@ class AbsWorkoutTest(unittest.TestCase):
         self.assertEqual(title_text.text, "TABATA", "进入tabata课程错误")
         loop_num = 0
         while loop_num < 28:
-            # noinspection PyBroadException
             button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
             button_go.click()
             sleep(2)
@@ -293,8 +291,6 @@ class AbsWorkoutTest(unittest.TestCase):
                     button_ok = self.driver.find_element_by_id("android:id/button1")
                     button_ok.click()
                     sleep(1)
-                    self.driver.get_screenshot_as_file('/Users/a140/Desktop/screenshot_absworkout/tabata/bug/'
-                                                       + 'num' + str(loop_num + 1) + 'index' + str(count + 1) + '2.png')
                 button_next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_next")
                 button_next.click()
                 sleep(2)
