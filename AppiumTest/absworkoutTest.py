@@ -447,6 +447,8 @@ class AbsWorkoutTest(unittest.TestCase):
         enter_classic = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
         enter_classic.click()
         sleep(2)
+        title_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/title_tv")
+        self.assertEqual(title_text.text, "CLASSIC", "进入classic课程错误")
         button_go = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_start")
         button_go.click()
         sleep(2)
@@ -779,21 +781,21 @@ class AbsWorkoutTest(unittest.TestCase):
 # 课程学习
 def suite_class():
     suite = unittest.TestSuite()
-    suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
+    # suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
     suite.addTest(AbsWorkoutTest('test_class_list_classic_preview'))
-    suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
-    suite.addTest(AbsWorkoutTest('test_class_video_pause'))
-    suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
-    suite.addTest(AbsWorkoutTest('test_class_video_sound'))
-    suite.addTest(AbsWorkoutTest('test_class_video_close'))
-    suite.addTest(AbsWorkoutTest('test_class_pause'))
-    suite.addTest(AbsWorkoutTest('test_class_exit_close'))
-    suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
-    suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
-    suite.addTest(AbsWorkoutTest('test_class_done'))
-    suite.addTest(AbsWorkoutTest('test_class_done_weight'))
-    suite.addTest(AbsWorkoutTest('test_class_done_again'))
-    suite.addTest(AbsWorkoutTest('test_class_done_share'))
+    # suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
+    # suite.addTest(AbsWorkoutTest('test_class_video_pause'))
+    # suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
+    # suite.addTest(AbsWorkoutTest('test_class_video_sound'))
+    # suite.addTest(AbsWorkoutTest('test_class_video_close'))
+    # suite.addTest(AbsWorkoutTest('test_class_pause'))
+    # suite.addTest(AbsWorkoutTest('test_class_exit_close'))
+    # suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
+    # suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
+    # suite.addTest(AbsWorkoutTest('test_class_done'))
+    # suite.addTest(AbsWorkoutTest('test_class_done_weight'))
+    # suite.addTest(AbsWorkoutTest('test_class_done_again'))
+    # suite.addTest(AbsWorkoutTest('test_class_done_share'))
     return suite
 
 
@@ -825,4 +827,4 @@ def suite_setting():
 
 if __name__ == '__main__':
     runner = HtmlTestRunner.HTMLTestRunner(output='report_absworkout')
-    runner.run(suite_setting())
+    runner.run(suite_class())
