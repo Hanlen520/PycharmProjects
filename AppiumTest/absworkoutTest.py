@@ -14,8 +14,6 @@ class AbsWorkoutTest(unittest.TestCase):
     SCREEN_SHOT_CLASS_DONE = '/Users/a140/Desktop/screenshot_absworkout/class/done/'
     SCREEN_SHOT_CLASS_EXIT = '/Users/a140/Desktop/screenshot_absworkout/class/exit/'
     SCREEN_SHOT_CLASS_PAUSE = '/Users/a140/Desktop/screenshot_absworkout/class/pause/'
-    SCREEN_SHOT_CLASS_PREVIEW = '/Users/a140/Desktop/screenshot_absworkout/class/preview/'
-    SCREEN_SHOT_CLASS_UI = '/Users/a140/Desktop/screenshot_absworkout/class/ui/'
     SCREEN_SHOT_CLASS_VIDEO = '/Users/a140/Desktop/screenshot_absworkout/class/video/'
     SCREEN_SHOT_CLASS_BUG = '/Users/a140/Desktop/screenshot_absworkout/class/bug/'
     SCREEN_SHOT_SETTING_BUG = '/Users/a140/Desktop/screenshot_absworkout/setting/bug/'
@@ -625,12 +623,15 @@ class AbsWorkoutTest(unittest.TestCase):
 
     # 初次打开app
     def test_enter_choice_item(self):
+        # 选择"TABATA"
         item_button = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/item_button")
         item_button[2].click()
         sleep(2)
+        # 点击"NEXT"
         next = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/next")
         next.click()
         sleep(2)
+        # 默认时间"20:00"，点击进入app
         start = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btn_ok")
         start.click()
 
@@ -649,20 +650,27 @@ class AbsWorkoutTest(unittest.TestCase):
 
     # 设置页-添加提醒
     def test_setting_reminder_add(self):
+        # 点击进入设置页
         setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
         setting.click()
+        # 点击add reminder
         add_reminder = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/add_tag")
         add_reminder.click()
+        # 点击reminder label
         reminder_label = self.driver.find_element_by_id(
             "abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
         reminder_label.click()
+        # 选择"TABATA"
         label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
         label_list[2].click()
+        # 重复提醒日期取消sunday
         repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
         repeat_day[0].click()
+        # 点击"save"，提醒添加成功
         save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
         save.click()
         sleep(2)
+        # 断言提醒是否添加正确
         try:
             global reminder_text
             reminder_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
@@ -706,28 +714,35 @@ class AbsWorkoutTest(unittest.TestCase):
 
     # 设置页-修改提醒
     def test_setting_reminder_update(self):
+        # 进入设置页
         setting = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/toolbar_setting")
         setting.click()
+        # 点击进入第一个提醒
         reminder_list = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
         reminder_list[0].click()
+        # 选择"HIIT"
         reminder_label = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_program")
         reminder_label.click()
         label_list = self.driver.find_elements_by_class_name("android.widget.LinearLayout")
         label_list[1].click()
+        # 设置提醒时间为当前时间
         reminder_time = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/reminder_time")
         reminder_time.click()
         sleep(1)
         button_ok = self.driver.find_element_by_id("android:id/button1")
         button_ok.click()
         self.swipeUp()
+        # 取消周三、周四、周五、周六的日期勾选
         repeat_day = self.driver.find_elements_by_id("abs.workout.fitness.tabata.hiit.stomach:id/day_check")
         repeat_day[3].click()
         repeat_day[4].click()
         repeat_day[5].click()
         repeat_day[6].click()
+        # 保存提醒
         save = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/btnRight")
         save.click()
         sleep(2)
+        # 断言提醒是否修改正确
         reminder_update_text = self.driver.find_element_by_id("abs.workout.fitness.tabata.hiit.stomach:id/program_info")
         self.assertEqual(reminder_update_text.text, 'HIIT, Mon Tue ', '修改提醒错误')
         self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'reminder_update.png')
@@ -778,27 +793,47 @@ class AbsWorkoutTest(unittest.TestCase):
         self.driver.get_screenshot_as_file(self.SCREEN_SHOT_SETTING + 'version.png')
 
 
-# 课程学习
-def suite_class():
+# run this test case after the first installation
+# 设置页
+def suite_setting():
     suite = unittest.TestSuite()
-    # suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
-    suite.addTest(AbsWorkoutTest('test_class_list_classic_preview'))
-    # suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
-    # suite.addTest(AbsWorkoutTest('test_class_video_pause'))
-    # suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
-    # suite.addTest(AbsWorkoutTest('test_class_video_sound'))
-    # suite.addTest(AbsWorkoutTest('test_class_video_close'))
-    # suite.addTest(AbsWorkoutTest('test_class_pause'))
-    # suite.addTest(AbsWorkoutTest('test_class_exit_close'))
-    # suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
-    # suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
-    # suite.addTest(AbsWorkoutTest('test_class_done'))
-    # suite.addTest(AbsWorkoutTest('test_class_done_weight'))
-    # suite.addTest(AbsWorkoutTest('test_class_done_again'))
-    # suite.addTest(AbsWorkoutTest('test_class_done_share'))
+    suite.addTest(AbsWorkoutTest('test_enter_choice_item'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_add'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_delete'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_update'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_off'))
+    suite.addTest(AbsWorkoutTest('test_setting_reminder_on'))
+    suite.addTest(AbsWorkoutTest('test_setting_ad'))
+    suite.addTest(AbsWorkoutTest('test_setting_feedback'))
+    suite.addTest(AbsWorkoutTest('test_setting_share'))
+    suite.addTest(AbsWorkoutTest('test_setting_privacy'))
+    suite.addTest(AbsWorkoutTest('test_setting_version'))
     return suite
 
 
+# run this test case after the suite_setting()
+# 课程学习
+def suite_class():
+    suite = unittest.TestSuite()
+    suite.addTest(AbsWorkoutTest('test_class_list_classic_go'))
+    suite.addTest(AbsWorkoutTest('test_class_list_classic_preview'))
+    suite.addTest(AbsWorkoutTest('test_class_video_arrows'))
+    suite.addTest(AbsWorkoutTest('test_class_video_pause'))
+    suite.addTest(AbsWorkoutTest('test_class_video_bgm'))
+    suite.addTest(AbsWorkoutTest('test_class_video_sound'))
+    suite.addTest(AbsWorkoutTest('test_class_video_close'))
+    suite.addTest(AbsWorkoutTest('test_class_pause'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_close'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_quit'))
+    suite.addTest(AbsWorkoutTest('test_class_exit_snooze'))
+    suite.addTest(AbsWorkoutTest('test_class_done'))
+    suite.addTest(AbsWorkoutTest('test_class_done_weight'))
+    suite.addTest(AbsWorkoutTest('test_class_done_again'))
+    suite.addTest(AbsWorkoutTest('test_class_done_share'))
+    return suite
+
+
+# run this test case in the end
 # 遍历所有课程
 def suite_class_all():
     suite = unittest.TestSuite()
@@ -808,23 +843,6 @@ def suite_class_all():
     return suite
 
 
-# 设置页
-def suite_setting():
-    suite = unittest.TestSuite()
-    suite.addTest(AbsWorkoutTest('test_enter_choice_item'))
-    suite.addTest(AbsWorkoutTest('test_setting_ad'))
-    suite.addTest(AbsWorkoutTest('test_setting_reminder_add'))
-    suite.addTest(AbsWorkoutTest('test_setting_reminder_off'))
-    suite.addTest(AbsWorkoutTest('test_setting_reminder_on'))
-    suite.addTest(AbsWorkoutTest('test_setting_reminder_delete'))
-    suite.addTest(AbsWorkoutTest('test_setting_reminder_update'))
-    suite.addTest(AbsWorkoutTest('test_setting_feedback'))
-    suite.addTest(AbsWorkoutTest('test_setting_share'))
-    suite.addTest(AbsWorkoutTest('test_setting_privacy'))
-    suite.addTest(AbsWorkoutTest('test_setting_version'))
-    return suite
-
-
 if __name__ == '__main__':
     runner = HtmlTestRunner.HTMLTestRunner(output='report_absworkout')
-    runner.run(suite_class())
+    runner.run(suite_setting())
