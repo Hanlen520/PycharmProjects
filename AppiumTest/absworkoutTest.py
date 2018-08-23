@@ -9,7 +9,8 @@ import HtmlTestRunner
 
 class AbsWorkoutTest(unittest.TestCase):
 
-    SCREEN_SHOT_PATH = '/Users/a140/Desktop/screenshot_absworkout/'
+    # 截图存储路径
+    SCREEN_SHOT_PATH = '/Users/a140/Desktop/screenshot_absworkout/class_all/'
     SCREEN_SHOT_CLASS_LIST = '/Users/a140/Desktop/screenshot_absworkout/class/list/'
     SCREEN_SHOT_CLASS_DONE = '/Users/a140/Desktop/screenshot_absworkout/class/done/'
     SCREEN_SHOT_CLASS_EXIT = '/Users/a140/Desktop/screenshot_absworkout/class/exit/'
