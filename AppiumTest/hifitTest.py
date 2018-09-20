@@ -13,12 +13,11 @@ import os
 class HifitTest(unittest.TestCase):
 
     # 截图存放路径
-    SCREEN_SHOT_PATH = '/Users/a140/Desktop/screenshot_hifit/'
+    SCREEN_SHOT_PATH = '/Users/shengjie.liu/Desktop/screenshot_hifit/'
     # 其他截图存放路径
-    SCREEN_SHOT_PATH_OTHERS = '/Users/a140/Desktop/screenshot_hifit/screenshot_others/'
+    SCREEN_SHOT_PATH_OTHERS = '/Users/shengjie.liu/Desktop/screenshot_hifit/screenshot_others/'
     # apk文件存放路径
-    # APK_PATH = ' /Users/a140/Desktop/hifit_latest_10/'
-    PATH = '/Users/a140/Desktop/hifit_latest_10/'
+    PATH = '/Users/shengjie.liu/Desktop/hifit_latest_10/'
 
     def setUp(self):
         desired_caps = {}
