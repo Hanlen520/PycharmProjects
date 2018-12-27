@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd1e6eb-52f0-435c-8025-283cf46b28fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PerformenceScript/BatteryTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerformenceScript/BatteryTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PerformenceScript/CpuTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/PerformenceScript/CpuTest.py" afterDir="false" />
       <change beforePath="$USER_HOME$/Shell-Script/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Shell-Script/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/Shell-Script/apps_for_uninstall/all_list.txt" beforeDir="false" afterPath="$USER_HOME$/Shell-Script/apps_for_uninstall/all_list.txt" afterDir="false" />
       <change beforePath="$USER_HOME$/Shell-Script/apps_for_uninstall/list.txt" beforeDir="false" afterPath="$USER_HOME$/Shell-Script/apps_for_uninstall/list.txt" afterDir="false" />
@@ -27,32 +25,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpuinfoCheckList" value="1" />
+          <entry key="7" value="1" />
+          <entry key="cpuinfoCheckList" value="2" />
+          <entry key="easy_install" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="pidinfo" value="1" />
-          <entry key="py" value="10" />
-          <entry key="report" value="2" />
-          <entry key="sh" value="8" />
+          <entry key="py" value="15" />
+          <entry key="py-bk" value="1" />
+          <entry key="report" value="3" />
+          <entry key="sh" value="21" />
+          <entry key="time" value="1" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="8" />
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="10" />
+          <entry key="Bash" value="21" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cpuinfoCheckList" value="230" />
           <entry key="py" value="18" />
-          <entry key="sh" value="2214" />
+          <entry key="sh" value="2215" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="2214" />
+          <entry key="Bash" value="2215" />
           <entry key="Markdown" value="230" />
           <entry key="Python" value="18" />
         </counts>
@@ -73,6 +76,7 @@
         <option value="$PROJECT_DIR$/PerformenceScript/getCpuInfo.py" />
         <option value="$PROJECT_DIR$/PerformenceScript/getCpuInfo.sh" />
         <option value="$PROJECT_DIR$/MonkeyScripts/Dailer/monkeyjob.sh" />
+        <option value="$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/buildskin.sh" />
       </list>
     </option>
   </component>
@@ -104,6 +108,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,7 +138,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16745655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16745655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -144,7 +149,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.5930693" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5930693" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -176,16 +181,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cpuinfoCheckList">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="144">
-            <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PerformenceScript/getCpuInfo.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -260,6 +255,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/keyboard_scripts/DeviceManager.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/keyboard_scripts/dumpcsv.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/keyboard_scripts/Main.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/keyboard_scripts-bk/dumpcsv.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/buildskin.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="100" column="33" lean-forward="true" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/skin.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1283" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/skin-bk.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/Scripts/legcy_scripts/test.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/scripts_test/time">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/SmartInput/report">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/venv/bin/easy_install-2.7">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/venv/bin/easy_install">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#93#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/logcat.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/meminfo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/SmartInput/report.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/SmartInput/monkeyjob.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/SmartInput/dumplog.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/SmartInput/monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/monkey.py-bk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/old_monkey_mail.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/shop_meminfo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/cat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/dumplog.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cootek/MonkeyScripts/test.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpuinfoCheckList">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="162">
+            <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
