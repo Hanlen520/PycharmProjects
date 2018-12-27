@@ -1,9 +1,11 @@
-
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 
 # macOS file
 *.DS_Store
+
+# confidentiality
+cootek/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
