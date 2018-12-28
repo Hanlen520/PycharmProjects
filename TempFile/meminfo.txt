@@ -1,0 +1,1698 @@
+TIME FLAG: Wed Dec 5 19:15:37 CST 2018
+No process found for: abc.apple.emoji.theme.gif.keyboard
+TIME FLAG: Wed Dec 5 19:16:07 CST 2018
+No process found for: abc.apple.emoji.theme.gif.keyboard
+TIME FLAG: Wed Dec 5 19:22:18 CST 2018
+No process found for: abc.apple.emoji.theme.gif.keyboard
+TIME FLAG: Wed Dec 5 19:22:49 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1274174 Realtime: 1274174
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    40781    40732       12        0    85376    81466     3909
+  Dalvik Heap     5342     5312        4        0     6838     3419     3419
+ Dalvik Other     2921     2920        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       18        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10333      568     7552      134                           
+    .apk mmap      425        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16334        8    15252        0                           
+    .oat mmap     2856        0      184        0                           
+    .art mmap     1744     1212       32        5                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    29816    29816        0        0                           
+      Unknown     2728     2708       20       20                           
+        TOTAL   116155    83324    25628      159    92214    84885     7328
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6556
+         Native Heap:    40732
+                Code:    23568
+               Stack:       44
+            Graphics:    29816
+       Private Other:     8236
+              System:     7203
+ 
+               TOTAL:   116155       TOTAL SWAP PSS:      159
+ 
+ Objects
+               Views:       31         ViewRootImpl:        1
+         AppContexts:       16           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       72        Proxy Binders:       52
+       Parcel memory:       27         Parcel count:      109
+    Death Recipients:        1      OpenSSL Sockets:       10
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1198
+  PAGECACHE_OVERFLOW:      343          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/40/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/28/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      50/122/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       120/33/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1283/33/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/36/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:23:19 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1304415 Realtime: 1304415
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    41229    41180       12        0    86912    81578     5333
+  Dalvik Heap     5952     5664      252        0     7039     3520     3519
+ Dalvik Other     2593     2592        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       19        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10352      568     7564      134                           
+    .apk mmap      592        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16420        8    15264        0                           
+    .oat mmap     2956        0      184        0                           
+    .art mmap     1969     1232      216        5                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    29844    29844        0        0                           
+      Unknown     2656     2636       20       20                           
+        TOTAL   117439    83772    26084      159    93951    85098     8852
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7112
+         Native Heap:    41180
+                Code:    23592
+               Stack:       44
+            Graphics:    29844
+       Private Other:     8084
+              System:     7583
+ 
+               TOTAL:   117439       TOTAL SWAP PSS:      159
+ 
+ Objects
+               Views:       33         ViewRootImpl:        1
+         AppContexts:       17           Activities:        2
+              Assets:        8        AssetManagers:        6
+       Local Binders:       78        Proxy Binders:       60
+       Parcel memory:       53         Parcel count:      133
+    Death Recipients:        1      OpenSSL Sockets:       10
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/43/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/31/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      66/125/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       120/36/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1473/36/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/39/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:23:49 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1334695 Realtime: 1334695
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44701    44648       16        0    88960    85409     3550
+  Dalvik Heap     7253     6988      232        0     8219     4110     4109
+ Dalvik Other     2745     2744        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10406      568     7616      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16808        8    15548        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2608     2588       20       20                           
+        TOTAL   123837    89572    26420      158    97179    89519     7659
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     8480
+         Native Heap:    44648
+                Code:    23936
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8184
+              System:     7845
+ 
+               TOTAL:   123837       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       83         ViewRootImpl:        3
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       73        Proxy Binders:       58
+       Parcel memory:       67         Parcel count:      148
+    Death Recipients:        1      OpenSSL Sockets:       13
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/46/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/34/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      74/128/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/41/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1559/39/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/42/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:24:19 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1365001 Realtime: 1365001
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    43785    43732       16        0    88960    84225     4734
+  Dalvik Heap     6229     5964      232        0     7394     3697     3697
+ Dalvik Other     2685     2684        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10406      568     7616      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16811        8    15548        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2608     2588       20       20                           
+        TOTAL   121840    87572    26420      158    96354    87922     8431
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7456
+         Native Heap:    43732
+                Code:    23936
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8124
+              System:     7848
+ 
+               TOTAL:   121840       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       75        Proxy Binders:       58
+       Parcel memory:       88         Parcel count:      174
+    Death Recipients:        1      OpenSSL Sockets:       12
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/49/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/37/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      82/131/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/44/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1623/42/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/45/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:24:50 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1395314 Realtime: 1395314
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44081    44028       16        0    88960    84615     4344
+  Dalvik Heap     5621     5356      232        0     7379     3690     3689
+ Dalvik Other     3069     3068        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10406      568     7616      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16821        8    15552        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2604     2584       20       20                           
+        TOTAL   121918    87640    26424      158    96339    88305     8033
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6848
+         Native Heap:    44028
+                Code:    23940
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8504
+              System:     7854
+ 
+               TOTAL:   121918       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       77        Proxy Binders:       59
+       Parcel memory:       92         Parcel count:      178
+    Death Recipients:        1      OpenSSL Sockets:       12
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/52/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/40/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      90/134/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/47/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1687/45/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/48/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:25:20 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1425603 Realtime: 1425603
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44113    44060       16        0    88960    84595     4364
+  Dalvik Heap     5633     5368      232        0     7380     3690     3690
+ Dalvik Other     2669     2668        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10406      568     7616      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16829        8    15560        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2604     2584       20       20                           
+        TOTAL   121570    87284    26432      158    96340    88285     8054
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6860
+         Native Heap:    44060
+                Code:    23948
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8104
+              System:     7854
+ 
+               TOTAL:   121570       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       79        Proxy Binders:       60
+       Parcel memory:       92         Parcel count:      178
+    Death Recipients:        1      OpenSSL Sockets:       12
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/55/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/43/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109      98/137/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/50/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1751/48/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/51/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:25:50 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1455876 Realtime: 1455876
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44037    43984       16        0    88960    84606     4353
+  Dalvik Heap     5633     5368      232        0     7380     3690     3690
+ Dalvik Other     2669     2668        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10406      568     7616      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16851        8    15580        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2604     2584       20       20                           
+        TOTAL   121516    87208    26452      158    96340    88296     8043
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6860
+         Native Heap:    43984
+                Code:    23968
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8104
+              System:     7856
+ 
+               TOTAL:   121516       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       81        Proxy Binders:       61
+       Parcel memory:       92         Parcel count:      178
+    Death Recipients:        1      OpenSSL Sockets:       12
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/58/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/46/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109     106/140/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/53/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1815/51/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/54/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:26:21 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1486150 Realtime: 1486150
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44069    44016       16        0    88960    84551     4408
+  Dalvik Heap     5657     5392      232        0     7381     3691     3690
+ Dalvik Other     2673     2672        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10410      568     7620      134                           
+    .apk mmap      446        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16855        8    15580        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2604     2584       20       20                           
+        TOTAL   121584    87268    26456      158    96341    88242     8098
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6884
+         Native Heap:    44016
+                Code:    23972
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8108
+              System:     7860
+ 
+               TOTAL:   121584       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       83        Proxy Binders:       62
+       Parcel memory:       92         Parcel count:      178
+    Death Recipients:        1      OpenSSL Sockets:       12
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/61/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/49/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109     114/143/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/56/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1879/54/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/57/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Wed Dec 5 19:26:51 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1516426 Realtime: 1516426
+
+** MEMINFO in pid 7348 [abc.apple.emoji.theme.gif.keyboard] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    44125    44072       16        0    88960    84533     4426
+  Dalvik Heap     5425     5160      232        0     7366     3683     3683
+ Dalvik Other     2669     2668        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       67       12        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10410      568     7620      134                           
+    .apk mmap      492        0        4        0                           
+    .ttf mmap       16        0        0        0                           
+    .dex mmap    16892        8    15616        0                           
+    .oat mmap     3236        0      192        0                           
+    .art mmap     2011     1268      224        4                           
+   Other mmap     2630        4     2560        0                           
+    GL mtrack    30700    30700        0        0                           
+      Unknown     2604     2584       20       20                           
+        TOTAL   121487    87088    26492      158    96326    88216     8109
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6652
+         Native Heap:    44072
+                Code:    24008
+               Stack:       44
+            Graphics:    30700
+       Private Other:     8104
+              System:     7907
+ 
+               TOTAL:   121487       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       33         ViewRootImpl:        2
+         AppContexts:       15           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       85        Proxy Binders:       63
+       Parcel memory:       92         Parcel count:      178
+    Death Recipients:        1      OpenSSL Sockets:       11
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1178
+  PAGECACHE_OVERFLOW:      323          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/64/10  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ararat
+         4       16             49         2/52/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/CounterUsage.db
+         4      108            109     122/146/17  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/google_app_measurement.db
+         4       48            101       134/59/9  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+         4       20             55      1943/57/8  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/sys_wrapper_settings_string_int
+         4       48             59         6/60/5  /data/user/0/abc.apple.emoji.theme.gif.keyboard/databases/ezalter.db
+ 
+ Asset Allocations
+    zip:/data/app/abc.apple.emoji.theme.gif.keyboard-ZH8bD_8LpwHMb4GxObyG6g==/base.apk:/resources.arsc: 3390K
+TIME FLAG: Thu Dec 6 10:53:29 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 1978772 Realtime: 55551963
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    45121    45020        0        0    92672    87368     5303
+  Dalvik Heap     6374     6348        0        0     8597     4299     4298
+ Dalvik Other     3721     3720        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14788      632    10816      131                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      979        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    25865       36    24400        0                           
+    .oat mmap     3397        0      196        0                           
+    .art mmap     1835     1344       20        4                           
+   Other mmap     2866        4     2808        0                           
+    GL mtrack    18416    18416        0        0                           
+      Unknown     4061     4056        0       23                           
+        TOTAL   127961    79748    38596      158   101269    91667     9601
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7712
+         Native Heap:    45020
+                Code:    36428
+               Stack:       44
+            Graphics:    18416
+       Private Other:    10724
+              System:     9617
+ 
+               TOTAL:   127961       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       81         ViewRootImpl:        1
+         AppContexts:       18           Activities:        2
+              Assets:       12        AssetManagers:       10
+       Local Binders:      104        Proxy Binders:       60
+       Parcel memory:       38         Parcel count:      139
+    Death Recipients:        3      OpenSSL Sockets:        9
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/44/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/28/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/34/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1221/33/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:54:29 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2039226 Realtime: 55612417
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38068    37964        0        0    85504    79712     5791
+  Dalvik Heap     5087     4812      232        0     8592     4296     4296
+ Dalvik Other     3248     3248        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14877      636    10856      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      987        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    25997       36    24492        0                           
+    .oat mmap     3501        0      196        0                           
+    .art mmap     2075     1352      204        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18520    18520        0        0                           
+      Unknown     3893     3888        0       24                           
+        TOTAL   119673    70632    39144      173    94096    84008    10087
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6368
+         Native Heap:    37964
+                Code:    36564
+               Stack:       44
+            Graphics:    18520
+       Private Other:    10316
+              System:     9897
+ 
+               TOTAL:   119673       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      108        Proxy Binders:       61
+       Parcel memory:       36         Parcel count:      130
+    Death Recipients:        3      OpenSSL Sockets:        6
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/47/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/31/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/37/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1331/36/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:55:29 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2099588 Realtime: 55672779
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38288    38184        0        0    85504    80268     5235
+  Dalvik Heap     6483     6208      232        0     8729     4365     4364
+ Dalvik Other     3640     3640        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14870      636    10848      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26010       36    24504        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18532    18532        0        0                           
+      Unknown     3909     3904        0       24                           
+        TOTAL   121655    72668    39144      173    94233    84633     9599
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7760
+         Native Heap:    38184
+                Code:    36568
+               Stack:       44
+            Graphics:    18532
+       Private Other:    10724
+              System:     9843
+ 
+               TOTAL:   121655       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      105        Proxy Binders:       67
+       Parcel memory:       53         Parcel count:      156
+    Death Recipients:        3      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/50/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/34/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/40/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1425/39/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:56:30 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2159953 Realtime: 55733144
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38424    38320        0        0    85504    80446     5057
+  Dalvik Heap     6543     6268      232        0     8774     4387     4387
+ Dalvik Other     3248     3248        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14864      636    10836      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26032       36    24520        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18536    18536        0        0                           
+      Unknown     3937     3932        0       24                           
+        TOTAL   121507    72504    39148      173    94278    84833     9444
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7820
+         Native Heap:    38320
+                Code:    36572
+               Stack:       44
+            Graphics:    18536
+       Private Other:    10360
+              System:     9855
+ 
+               TOTAL:   121507       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      100        Proxy Binders:       68
+       Parcel memory:       55         Parcel count:      163
+    Death Recipients:        3      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/53/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/37/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/43/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1559/42/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:57:30 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2220328 Realtime: 55793519
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38492    38388        0        0    85504    80580     4923
+  Dalvik Heap     6359     6084      232        0     8729     4365     4364
+ Dalvik Other     3672     3672        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14862      636    10832      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26044       36    24532        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18540    18540        0        0                           
+      Unknown     3961     3956        0       24                           
+        TOTAL   121853    72840    39156      173    94233    84945     9287
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7636
+         Native Heap:    38388
+                Code:    36580
+               Stack:       44
+            Graphics:    18540
+       Private Other:    10808
+              System:     9857
+ 
+               TOTAL:   121853       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      103        Proxy Binders:       67
+       Parcel memory:       56         Parcel count:      168
+    Death Recipients:        3      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/56/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/40/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/46/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1653/45/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:58:31 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2280716 Realtime: 55853907
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38596    38492        0        0    85504    80894     4609
+  Dalvik Heap     6263     5988      232        0     8718     4359     4359
+ Dalvik Other     3268     3268        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14862      636    10832      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26043       36    24532        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18540    18540        0        0                           
+      Unknown     4009     4004        0       24                           
+        TOTAL   121504    72492    39156      173    94222    85253     8968
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7540
+         Native Heap:    38492
+                Code:    36580
+               Stack:       44
+            Graphics:    18540
+       Private Other:    10452
+              System:     9856
+ 
+               TOTAL:   121504       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      104        Proxy Binders:       68
+       Parcel memory:       58         Parcel count:      171
+    Death Recipients:        3      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/59/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/43/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/49/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1747/48/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 10:59:31 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2341104 Realtime: 55914295
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38832    38728        0        0    85504    81394     4109
+  Dalvik Heap     7171     6896      232        0     8829     4415     4414
+ Dalvik Other     3704     3704        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14862      636    10832      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26056       36    24544        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18412    18412        0        0                           
+      Unknown     4001     3996        0       24                           
+        TOTAL   122961    73936    39168      173    94333    85809     8523
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     8448
+         Native Heap:    38728
+                Code:    36592
+               Stack:       44
+            Graphics:    18412
+       Private Other:    10880
+              System:     9857
+ 
+               TOTAL:   122961       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      107        Proxy Binders:       69
+       Parcel memory:       58         Parcel count:      174
+    Death Recipients:        3      OpenSSL Sockets:        5
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/62/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/46/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/52/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1897/51/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 11:00:31 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2401483 Realtime: 55974674
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38744    38640        0        0    85504    81087     4416
+  Dalvik Heap     6351     6076      232        0     8734     4367     4367
+ Dalvik Other     3716     3716        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14862      636    10832      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap      932        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26060       36    24548        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18544    18544        0        0                           
+      Unknown     4017     4012        0       24                           
+        TOTAL   122217    73188    39172      173    94238    85454     8783
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7628
+         Native Heap:    38640
+                Code:    36596
+               Stack:       44
+            Graphics:    18544
+       Private Other:    10908
+              System:     9857
+ 
+               TOTAL:   122217       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:       97        Proxy Binders:       70
+       Parcel memory:       59         Parcel count:      177
+    Death Recipients:        3      OpenSSL Sockets:        5
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/65/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/49/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/55/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1991/54/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 11:01:32 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2461920 Realtime: 56035111
+
+** MEMINFO in pid 8895 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    38804    38700        0        0    86016    81168     4847
+  Dalvik Heap     6163     5888      232        0     8719     4360     4359
+ Dalvik Other     3280     3280        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem      144      128        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    14862      636    10832      145                           
+    .jar mmap      112        0      112        0                           
+    .apk mmap     1003        0      236        0                           
+    .ttf mmap       72        0        0        0                           
+    .dex mmap    26060       36    24548        0                           
+    .oat mmap     3499        0      196        0                           
+    .art mmap     2072     1352      200        4                           
+   Other mmap     2867        4     2808        0                           
+    GL mtrack    18544    18544        0        0                           
+      Unknown     4033     4028        0       24                           
+        TOTAL   121740    72640    39172      173    94735    85528     9206
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7440
+         Native Heap:    38700
+                Code:    36596
+               Stack:       44
+            Graphics:    18544
+       Private Other:    10488
+              System:     9928
+ 
+               TOTAL:   121740       TOTAL SWAP PSS:      173
+ 
+ Objects
+               Views:       73         ViewRootImpl:        1
+         AppContexts:       18           Activities:        1
+              Assets:       12        AssetManagers:       10
+       Local Binders:      100        Proxy Binders:       71
+       Parcel memory:       60         Parcel count:      180
+    Death Recipients:        3      OpenSSL Sockets:        5
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      711
+  PAGECACHE_OVERFLOW:      162          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             96       17/68/14  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       16             49         2/52/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       40             43         4/58/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      2085/57/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-zIAOWVfyE7eso-XblAtIFQ==/base.apk:/resources.arsc: 3205K
+    zip:/data/user/0/com.cootek.smartinputv5/files/v5701/assets_dir/assets/TouchPalResources.tprc:/assets/fonts/default_normal.ttf: 159K
+TIME FLAG: Thu Dec 6 11:03:25 CST 2018
+No process found for: com.cootek.smartinputv5
+TIME FLAG: Thu Dec 6 11:03:55 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2605095 Realtime: 56178286
+
+** MEMINFO in pid 9925 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    40183    40128        4        0    83840    81127     2712
+  Dalvik Heap     5892     5864        0        0     6841     3421     3420
+ Dalvik Other     2929     2928        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       19        0        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap    10265      560     6136      134                           
+    .apk mmap      472        0        0        0                           
+    .ttf mmap       14        0        0        0                           
+    .dex mmap    16760        8    15660        0                           
+    .oat mmap     2918        0      156        0                           
+    .art mmap     1710     1176       12        6                           
+   Other mmap     2646        4     2600        0                           
+    GL mtrack    29816    29816        0        0                           
+      Unknown     2742     2728        8       20                           
+        TOTAL   116574    83256    24580      160    90681    84548     6132
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7052
+         Native Heap:    40128
+                Code:    22520
+               Stack:       44
+            Graphics:    29816
+       Private Other:     8276
+              System:     8738
+ 
+               TOTAL:   116574       TOTAL SWAP PSS:      160
+ 
+ Objects
+               Views:       29         ViewRootImpl:        1
+         AppContexts:       16           Activities:        2
+              Assets:        7        AssetManagers:        5
+       Local Binders:       91        Proxy Binders:       55
+       Parcel memory:       29         Parcel count:      117
+    Death Recipients:        1      OpenSSL Sockets:        9
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1196
+  PAGECACHE_OVERFLOW:      343          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/40/10  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       48             59        14/36/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1317/33/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+         4       16             49         2/28/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       48            103      179/36/10  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4      108            109      58/122/17  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-pbBTJhjjj_5Gv3i2ZIOm7Q==/base.apk:/resources.arsc: 3392K
+TIME FLAG: Thu Dec 6 11:04:25 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2635369 Realtime: 56208559
+
+** MEMINFO in pid 9925 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    32319    32264        4        0    76160    73663     2496
+  Dalvik Heap     4769     4480      244        0     6742     3371     3371
+ Dalvik Other     2544     2544        0        0                           
+        Stack       44       44        0        0                           
+       Ashmem       19        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10327      568     6156      134                           
+    .apk mmap      472        0        0        0                           
+    .ttf mmap       14        0        0        0                           
+    .dex mmap    16820        8    15680        0                           
+    .oat mmap     2975        0      156        0                           
+    .art mmap     1920     1180      196        5                           
+   Other mmap     2646        4     2600        0                           
+    GL mtrack    29848    29848        0        0                           
+      Unknown     2766     2752        8       20                           
+        TOTAL   107650    73692    25052      159    82902    77034     5867
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     5856
+         Native Heap:    32264
+                Code:    22568
+               Stack:       44
+            Graphics:    29848
+       Private Other:     8164
+              System:     8906
+ 
+               TOTAL:   107650       TOTAL SWAP PSS:      159
+ 
+ Objects
+               Views:       21         ViewRootImpl:        1
+         AppContexts:       14           Activities:        1
+              Assets:        7        AssetManagers:        5
+       Local Binders:       77        Proxy Binders:       55
+       Parcel memory:       29         Parcel count:      113
+    Death Recipients:        1      OpenSSL Sockets:       10
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1196
+  PAGECACHE_OVERFLOW:      343          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       28             75       11/43/10  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4       48             59        14/39/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       20             55      1459/36/8  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+         4       16             49         2/31/5  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       48            103      179/39/10  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4      108            109      66/125/17  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-pbBTJhjjj_5Gv3i2ZIOm7Q==/base.apk:/resources.arsc: 3392K
+TIME FLAG: Thu Dec 6 11:05:36 CST 2018
+No process found for: com.cootek.smartinputv5
+TIME FLAG: Thu Dec 6 11:06:06 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2736153 Realtime: 56309344
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36301    36192        8        0    82816    77794     5021
+  Dalvik Heap     6311     6284        4        0     6856     3428     3428
+ Dalvik Other     3085     3084        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       21        0        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap    10358      560     6248      134                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      485        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    17741       16    16640        0                           
+    .oat mmap     2994        0      168        0                           
+    .art mmap     1764     1220       24        5                           
+   Other mmap     2553        4     2504        0                           
+    GL mtrack    35068    35068        0        0                           
+      Unknown     2844     2832        8       20                           
+        TOTAL   119897    85296    25732      159    89672    81222     8449
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7528
+         Native Heap:    36192
+                Code:    23756
+               Stack:       36
+            Graphics:    35068
+       Private Other:     8448
+              System:     8869
+ 
+               TOTAL:   119897       TOTAL SWAP PSS:      159
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       13           Activities:        2
+              Assets:        9        AssetManagers:        6
+       Local Binders:       76        Proxy Binders:       51
+       Parcel memory:       32         Parcel count:      108
+    Death Recipients:        1      OpenSSL Sockets:        6
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1068
+  PAGECACHE_OVERFLOW:      215          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/19/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/23/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/31/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       34/29/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/17/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44       312/19/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:06:36 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2766362 Realtime: 56339553
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36190    36084        4        0    83328    77560     5767
+  Dalvik Heap     5343     5068      232        0     6855     3428     3427
+ Dalvik Other     2644     2644        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap    10424      564     6268      134                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      455        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    17881       16    16712        0                           
+    .oat mmap     3093        0      168        0                           
+    .art mmap     1993     1240      208        4                           
+   Other mmap     2557        4     2508        0                           
+    GL mtrack    35104    35104        0        0                           
+      Unknown     2880     2868        8       20                           
+        TOTAL   118958    83628    26236      158    90183    80988     9194
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6516
+         Native Heap:    36084
+                Code:    23852
+               Stack:       36
+            Graphics:    35104
+       Private Other:     8272
+              System:     9094
+ 
+               TOTAL:   118958       TOTAL SWAP PSS:      158
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       13           Activities:        2
+              Assets:        9        AssetManagers:        6
+       Local Binders:       72        Proxy Binders:       54
+       Parcel memory:       27         Parcel count:      103
+    Death Recipients:        1      OpenSSL Sockets:        6
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/22/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/26/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/34/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       42/32/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/20/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44       454/22/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:07:07 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2796598 Realtime: 56369789
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36571    36464        4        0    83328    77864     5463
+  Dalvik Heap     5704     5428      232        0     6899     3450     3449
+ Dalvik Other     3052     3052        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10458      564     6268      141                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      599        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    17911       16    16724        0                           
+    .oat mmap     3124        0      168        0                           
+    .art mmap     2030     1248      208        4                           
+   Other mmap     2558        4     2508        0                           
+    GL mtrack    35108    35108        0        0                           
+      Unknown     2916     2904        8       21                           
+        TOTAL   120437    84824    26252      166    90227    81314     8912
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6884
+         Native Heap:    36464
+                Code:    23864
+               Stack:       36
+            Graphics:    35108
+       Private Other:     8720
+              System:     9361
+ 
+               TOTAL:   120437       TOTAL SWAP PSS:      166
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       14           Activities:        2
+              Assets:       10        AssetManagers:        7
+       Local Binders:       75        Proxy Binders:       58
+       Parcel memory:       41         Parcel count:      125
+    Death Recipients:        1      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/25/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/29/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/37/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       50/35/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/23/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44       596/25/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:07:37 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2826844 Realtime: 56400035
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36239    36128        4        0    83328    77739     5588
+  Dalvik Heap     5737     5460      232        0     6913     3457     3456
+ Dalvik Other     2653     2652        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10503      564     6272      151                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      606        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    17956       16    16752        0                           
+    .oat mmap     3162        0      168        0                           
+    .art mmap     2066     1248      208        5                           
+   Other mmap     2559        4     2508        0                           
+    GL mtrack    35108    35108        0        0                           
+      Unknown     2948     2936        8       22                           
+        TOTAL   119955    84152    26284      178    90241    81196     9044
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6916
+         Native Heap:    36128
+                Code:    23896
+               Stack:       36
+            Graphics:    35108
+       Private Other:     8352
+              System:     9519
+ 
+               TOTAL:   119955       TOTAL SWAP PSS:      178
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       14           Activities:        2
+              Assets:       10        AssetManagers:        7
+       Local Binders:       76        Proxy Binders:       60
+       Parcel memory:       46         Parcel count:      134
+    Death Recipients:        1      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/28/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/32/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/40/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       58/38/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/26/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44       738/28/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:08:07 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2857115 Realtime: 56430306
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36551    36440        4        0    83328    77875     5452
+  Dalvik Heap     5753     5476      232        0     6918     3459     3459
+ Dalvik Other     3089     3088        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10507      564     6276      151                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      636        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    17993       16    16776        0                           
+    .oat mmap     3164        0      168        0                           
+    .art mmap     2066     1248      208        5                           
+   Other mmap     2559        4     2508        0                           
+    GL mtrack    35112    35112        0        0                           
+      Unknown     2928     2916        8       22                           
+        TOTAL   120776    84900    26312      178    90246    81334     8911
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6932
+         Native Heap:    36440
+                Code:    23924
+               Stack:       36
+            Graphics:    35112
+       Private Other:     8768
+              System:     9564
+ 
+               TOTAL:   120776       TOTAL SWAP PSS:      178
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       14           Activities:        2
+              Assets:       10        AssetManagers:        7
+       Local Binders:       79        Proxy Binders:       61
+       Parcel memory:       47         Parcel count:      137
+    Death Recipients:        1      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/31/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/35/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/43/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       66/41/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/29/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44       880/31/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:08:37 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2887372 Realtime: 56460563
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36445    36332        4        0    83328    77895     5432
+  Dalvik Heap     5756     5476      232        0     7014     3507     3507
+ Dalvik Other     3122     3120        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10550      564     6280      164                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      638        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    18009       16    16788        0                           
+    .oat mmap     3204        0      168        0                           
+    .art mmap     2103     1248      208        5                           
+   Other mmap     2559        4     2508        0                           
+    GL mtrack    37712    37712        0        0                           
+      Unknown     2960     2948        8       24                           
+        TOTAL   123491    87456    26328      193    90342    81402     8939
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     6932
+         Native Heap:    36332
+                Code:    23940
+               Stack:       36
+            Graphics:    37712
+       Private Other:     8832
+              System:     9707
+ 
+               TOTAL:   123491       TOTAL SWAP PSS:      193
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       14           Activities:        2
+              Assets:       10        AssetManagers:        7
+       Local Binders:       81        Proxy Binders:       62
+       Parcel memory:       48         Parcel count:      143
+    Death Recipients:        1      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/34/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/38/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/46/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       74/44/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/32/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44      1022/34/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
+TIME FLAG: Thu Dec 6 11:09:08 CST 2018
+Applications Memory Usage (in Kilobytes):
+Uptime: 2917615 Realtime: 56490806
+
+** MEMINFO in pid 10299 [com.cootek.smartinputv5] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    36997    36884        4        0    83840    78450     5389
+  Dalvik Heap     5976     5696      232        0     6979     3490     3489
+ Dalvik Other     2730     2728        0        0                           
+        Stack       36       36        0        0                           
+       Ashmem       23        0        0        0                           
+    Other dev        8        0        8        0                           
+     .so mmap    10571      572     6284      164                           
+    .jar mmap      120        0      120        0                           
+    .apk mmap      608        0        4        0                           
+    .ttf mmap       53        0        0        0                           
+    .dex mmap    18018       16    16788        0                           
+    .oat mmap     3211        0      168        0                           
+    .art mmap     2107     1252      208        5                           
+   Other mmap     2559        4     2508        0                           
+    GL mtrack    35112    35112        0        0                           
+      Unknown     2988     2976        8       24                           
+        TOTAL   121310    85276    26332      193    90819    81940     8878
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     7156
+         Native Heap:    36884
+                Code:    23952
+               Stack:       36
+            Graphics:    35112
+       Private Other:     8468
+              System:     9702
+ 
+               TOTAL:   121310       TOTAL SWAP PSS:      193
+ 
+ Objects
+               Views:       74         ViewRootImpl:        2
+         AppContexts:       14           Activities:        2
+              Assets:       10        AssetManagers:        7
+       Local Binders:       82        Proxy Binders:       64
+       Parcel memory:       49         Parcel count:      145
+    Death Recipients:        1      OpenSSL Sockets:        7
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:     1043
+  PAGECACHE_OVERFLOW:      190          MALLOC_SIZE:      117
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       48             52         2/37/3  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       48             68         4/41/5  /data/user/0/com.cootek.smartinputv5/databases/ezalter.db
+         4       32             77       20/49/11  /data/user/0/com.cootek.smartinputv5/databases/ararat
+         4      108            109       82/47/15  /data/user/0/com.cootek.smartinputv5/databases/google_app_measurement.db
+         4       16             42         2/35/3  /data/user/0/com.cootek.smartinputv5/databases/CounterUsage.db
+         4       20             44      1208/37/5  /data/user/0/com.cootek.smartinputv5/databases/sys_wrapper_settings_string_int
+ 
+ Asset Allocations
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/resources.arsc: 3392K
+    zip:/data/app/com.cootek.smartinputv5-Z5V39lAH99xSmX2v2_7scg==/base.apk:/assets/fonts/font1.ttf: 5K
