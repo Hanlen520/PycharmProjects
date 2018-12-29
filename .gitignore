@@ -2,12 +2,13 @@
 # Edit at https://www.gitignore.io/?templates=python
 
 # macOS file
-*.DS_Store
+**/*.DS_Store
 
 # confidentiality
 cootek/
 
-.idea/
+**/.idea/
+**/output_cpuinfo/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -197,4 +198,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
