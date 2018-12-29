@@ -9,6 +9,7 @@ cootek/
 
 **/.idea/
 **/output_cpuinfo/
+**/reports/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
