@@ -10,11 +10,12 @@ printAPKInfo()
 dumpcrashlog()
 {
 	local logfile=$1
+	local pkname=$3
 #	echo "----------------------------------------------------------------------------------"
 #	echo "Crash information from logcat"
 #	echo "----------------------------------------------------------------------------------"
-	grep "ek.smartinputv5 >>> com.cootek.smartinputv5 <<<" ${logfile} > logcat_crash.txt
-	grep "crash" ${logfile} | grep "com.cootek.smartinputv5" >> logcat_crash.txt
+#	grep "ek.smartinputv5 >>> com.cootek.smartinputv5 <<<" ${logfile} > logcat_crash.txt
+	grep "crash" ${logfile} | grep ${pkname} >> logcat_crash.txt
 	count=`grep -c '' logcat_crash.txt`
 	echo "-----------------COUNT----------------" >> logcat_crash.txt
 	echo $count >> logcat_crash.txt
@@ -23,7 +24,7 @@ dumpcrashlog()
 #	echo "Crash information from monkey log"
 #	echo "----------------------------------------------------------------------------------"
 	local monkeylog=$2
-	grep "CRASH in com.cootek.smartinputv5" ${monkeylog} > monkeylog_crash.txt
+	grep "CRASH in ${pkname}" ${monkeylog} > monkeylog_crash.txt
 	count=`grep -c '' monkeylog_crash.txt`
 	echo "-----------------COUNT----------------" >> monkeylog_crash.txt
 	echo $count >> monkeylog_crash.txt
@@ -32,10 +33,11 @@ dumpcrashlog()
 dumpANRlog()
 {
 	local logfile=$1
+	local pkgname=$2
 #	echo "---------------------------------------------------------------------------------"
 #	echo "ANR information from logcat"
 #	echo "---------------------------------------------------------------------------------"
-	grep "ANR in com.cootek.smartinputv5" ${logfile} > logcat_ANR.txt
+	grep "ANR in ${pkgname}" ${logfile} > logcat_ANR.txt
 	count=`grep -c '' logcat_ANR.txt`
 	echo "-----------------COUNT----------------" >> logcat_ANR.txt
 	echo $count >> logcat_ANR.txt
@@ -60,13 +62,14 @@ printmail()
 	echo "---------------------------------------------------------------------------------" >> mail_content
 	cat logcat_ANR.txt >> mail_content
 
-	printAPKInfo
+#	printAPKInfo
 }
 
 LOGCAT_FILE=$1
 MONKEY_LOG=$2
+PACKAGE_NAME=$3
 
-dumpcrashlog $LOGCAT_FILE $MONKEY_LOG
-dumpANRlog $LOGCAT_FILE
+dumpcrashlog $LOGCAT_FILE $MONKEY_LOG ${PACKAGE_NAME}
+dumpANRlog $LOGCAT_FILE ${PACKAGE_NAME}
 
 printmail
