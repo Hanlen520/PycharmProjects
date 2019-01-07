@@ -4,9 +4,11 @@
 # macOS file
 **/*.DS_Store
 
-# output file
+# output file（monkeyScript）
 **/*.txt
 **/logs/
+monkeyScript/buildtime
+monkeyScript/mail_content
 
 # confidentiality
 cootek/
