@@ -32,7 +32,7 @@ def logcat():
 
 # Run monkey test command
 def runmonkey():
-    os.popen('adb shell monkey -p %s --ignore-crashes --ignore-timeouts --ignore-security-exceptions -s 1024 '
+    os.popen('adb shell monkey -p com.cootek.test -p %s --ignore-crashes --ignore-timeouts --ignore-security-exceptions -s 1024 '
              '--throttle 200 -v 100 >> monkeylog.txt' % packageName)
     # os.popen('adb shell monkey -p com.cootek.test  -p com.adroid.mms -p com.cootek.smartinputv5 '
              # '--throttle 10 --ignore-timeouts --ignore-crashes -s 112 -v 100 >> monkeylog.txt')

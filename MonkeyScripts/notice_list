@@ -1,0 +1,56 @@
+rm -rf *
+/opt/data/cootekime/MonkeyScripts/monkeyjob.sh
+sh -x /opt/data/cootekime/MonkeyScripts/monkey_mail.sh
+
+
+
+/data/jenkins_home/jenkins/opt/data/cootekime
+
+monkeyjob:
+1、启动时输入参数：被测应用包名
+2、包名位置在上传到服务器前修改：
+monkey.py
+dumplog.sh
+report.sh
+
+
+3、上传cootek test apk文件到服务器，每次同时安装两个软件：输入法和CootekTest
+
+
+问题：
+如何上传文件到aliyun
+
+
+在Jenkinsshell执行后，加两个ls和cat查看是否成功
+
+
+
+------------------------------------------------
+
+logcat.txt
+monkeylog.txt
+meminfo.txt
+logcat_crash.txt
+monkeylog_crash.txt
+logcat_ANR.txt
+mail_content
+
+------------------------------------
++ python /var/lib/jenkins/opt/data/cootekime/MonkeyScripts/monkey.py com.cootek.smartinputv5
+failed to clear the 'main' log
+adb: failed to stat AllEditTextTest.apk: No such file or directory
+error: device 'emulator-5716' not found
+--------------------------------------------
+
+rm -rf *
+adb uninstall com.cootek.test
+adb install -r /var/lib/jenkins/opt/data/cootekime/MonkeyScripts/AllEditTextTest.apk
+/bin/bash +x /var/lib/jenkins/opt/data/cootekime/MonkeyScripts/monkeyjob.sh com.cootek.smartinputv5
+cat output_monkey/mail_content
+
+
+----------------------
+输入的文件地址为绝对地址，产出的为默认workspace
+
+
+
