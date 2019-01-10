@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 #根据dumpsys meminfo后的文件中不同的标签， 设定文件名
 #	因为标签诸如'.ttf mmap'等， 中间有空格， 不适合直接做文件名
 getMemFileName()
@@ -47,7 +48,7 @@ getMemFileName()
 	*)
 			;;
 	esac
-	
+
 	echo ${fileName}
 }
 
@@ -56,6 +57,7 @@ getMemFileName()
 splitMeminfo()
 {
 	local fileName=$1
+	# 删除VALUE字符串中以分隔符“.”匹配的右边字符，保留左边字符。${VALUE%.*}
 	local folderName=${fileName%.*}
 	mkdir logs/${folderName}
 	awk '{print $1}' logs/${fileName} > logs/${folderName}/Pss
@@ -72,9 +74,10 @@ removeTag()
 {
 	local fileName=$1
 	local tag=$2
-	
+
 	case $tag in
 		"Native")
+		# 删除第一列，然后输出到logs/native.txt
 		awk '{$1="";print}' ${fileName} > logs/native.txt
 		splitMeminfo native.txt
 			;;
@@ -138,7 +141,7 @@ getCSVFile()
 {
 	mkdir logs/csv
 	local meminfo_Files=("Pss" "SharedDirty" "PrivateDirty" "HeapSize" "HeapFree")
-#	for item in ${meminfo_Files}
+    # 数组长度
 	local count=${#meminfo_Files[@]}
 	for((i=0;i<$count;i++))
 	do
@@ -146,7 +149,9 @@ getCSVFile()
 		echo "Categories" >> logs/csv/${item}.csv
 		for data in `find ./ -name "${item}"`
 		do
+		    # 删除VALUE字符串中以分隔符“.”匹配的右边字符，保留左边字符。${VALUE%.*}
 		    seriesName=${data%/*}
+		    # 删除VALUE字符串中以分隔符“.”匹配的左边字符，保留右边字符。${VALUE##*.}
 		    seriesName=${seriesName##*/}
 			csvline=${seriesName}
 			for line in `cat ${data}`
@@ -154,20 +159,19 @@ getCSVFile()
 				csvline=${csvline},${line}
 			done
 			echo ${csvline} >> logs/csv/${item}.csv
-			sed -i "s/,//g" logs/csv/${item}.csv
+			sed -i '' "s/,//g" logs/csv/${item}.csv
 		done
-	done 
+	done
 }
-#Main函数
-#	MONKEY_WEBAPPS_HOME: 服务器端部署静态网页的路径(tomcat6)
-#MONKEY_WEBAPPS_HOME=/var/lib/tomcat6/webapps/ROOT/monkeytest
+
+# 第一列的所有参数
 MEMINFO_ARGS=("Native" "Dalvik" "Cursor" "Other dev"  "Ashmem" ".so mmap" ".jar mmap" ".apk mmap" ".ttf mmap" ".dex mmap" "Other mmap" "Unknown" "TOTAL:")
-#meminfo.txt $CURRENT_TIME
-memFile=$1
-REPORT_TIME=$2
+# 从run.sh传入的4个参数
+MEMINFO_File=${1}
+# MEMINFO_ARGS的长度(length)
 count=${#MEMINFO_ARGS[@]}
 
-#如果当期路径有logs/, 删掉, 避免数据混淆
+#如果当前路径有logs/, 删掉, 避免数据混淆
 if [ -d "logs" ]; then
 	rm -r logs
 fi
@@ -178,53 +182,44 @@ mkdir logs
 #解析日志
 for((i=0;i<$count;i++));
 do
-	echo ${MEMINFO_ARGS[$i]}
+    # 输出参数到terminal
+#	echo ${MEMINFO_ARGS[$i]}
+	# 调用getMemFileName方法，传入参数MEMINFO_ARGS，返回文件名
 	fileName=`getMemFileName "${MEMINFO_ARGS[$i]}"`
-	awk /"${MEMINFO_ARGS[$i]}"/'{print}' ${memFile} > logs/${fileName} 
+	# 输出包含${MEMINFO_ARGS[$i]}的行
+	awk /"${MEMINFO_ARGS[$i]}"/'{print}' ${MEMINFO_File} > logs/${fileName}
 	removeTag logs/${fileName} "${MEMINFO_ARGS[$i]}"
 done
 
 #将分析过的日志转换成csv文件
 getCSVFile
 
-grep 'TIME FLAG:' $memFile > logs/logtime
+# 将时间取出来放到logs/time文件中
+grep 'TIME FLAG:' $MEMINFO_File > logs/logtime
 
 cat logs/logtime | while read line
 do
-	echo ${line#*:} >> logs/time	
+	echo ${line#*:} >> logs/time
 done
 
-linecount=`awk 'END{print NR}' logs/total/Pss`
+# 处理完所有行，输出行数
+linecount_pss=`awk 'END{print NR}' logs/total/Pss`
 
-echo "Time,TOTAL,Unknown" > logs/csv/t_u.csv
-echo $linecount
-for ((j=1;j<=$linecount;j++));
+# 提取时间和TOTAL值，输出到t_u.csv文件
+echo "Time,TOTAL" > logs/csv/t_u.csv
+for ((j=1;j<=$linecount_pss;j++));
 do
 	total_mem=`tail -n $j logs/total/Pss | head -n 1`
 	time_mem=`tail -n $j logs/time | head -n 1`
-	unknown_mem=`tail -n $j logs/unknown/Pss | head -n 1`
-	echo "${time_mem},${total_mem},${unknown_mem}" >> logs/csv/t_u_bk.csv
+	echo "${time_mem},${total_mem}" >> logs/csv/t_u_bk.csv
 done
 
-linecount=`awk 'END{print NR}' logs/csv/t_u_bk.csv`
-for ((k=1;k<=$linecount;k++));
+linecount_tubk=`awk 'END{print NR}' logs/csv/t_u_bk.csv`
+for ((k=1;k<=$linecount_tubk;k++));
 do
 	total_line=`tail -n $k logs/csv/t_u_bk.csv | head -n 1`
     echo "$total_line" >> logs/csv/t_u.csv
 done
 
-event_count=`grep "Monkey finished" monkeylog.txt | wc -l`
 #删掉*meminfo.txt, 这里已经没用了, 省的占空间. 典型的卸磨杀驴有木有...
-rm logs/*meminfo.txt
-
-
-#复制example的静态网页资源到新文件夹 ${REPORT_TIME}
-#echo -e "CooTek01" | sudo -S cp -r ${MONKEY_WEBAPPS_HOME}/examples ${MONKEY_WEBAPPS_HOME}/${REPORT_TIME}
-
-#将生成的csv文件复制到report文件夹下
-#echo -e "CooTek01" | sudo -S cp -r logs/csv/ ${MONKEY_WEBAPPS_HOME}/${REPORT_TIME}/report
-
-#echo "Event Count: ${event_count}W" > report
-
-#打印静态网页外部地址
-#echo "http://jenkins.corp.cootek.com/monkeytest/${REPORT_TIME}/index.htm" >> report
+#rm logs/*meminfo.txt
