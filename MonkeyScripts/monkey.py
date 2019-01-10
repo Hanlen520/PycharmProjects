@@ -119,7 +119,7 @@ def main():
     #dump_thread=MyThread(tcpdump,(),tcpdump.__name__);
     # print "main Thread begins at ",ctime();
     t.start()
-    for i in range(0, 99):
+    for i in range(0, 9):
         # dump_heap()
         t2 = MyThread(runmonkey, (), runmonkey.__name__)
         t2.start()
