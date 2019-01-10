@@ -4,21 +4,20 @@
 # macOS file
 **/*.DS_Store
 
-# output file（monkeyScript）
+# output file（MonkeyScripts）
 **/*.txt
 **/logs/
-monkeyScript/buildtime
-monkeyScript/mail_content
-
-# confidentiality
-cootek/
+MonkeyScripts_Local/buildtime
+MonkeyScripts_Local/mail_content
 
 **/.idea/
 **/output_cpuinfo/
 **/reports/
 
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
+
 __pycache__/
 *.py[cod]
 *$py.class
@@ -205,3 +204,4 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
+
