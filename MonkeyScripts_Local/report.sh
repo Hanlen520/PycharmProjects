@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# 此脚本用作处理拉取到的原始内存信息，提取其中的TOTAL值和时间戳，最后输出CSV格式的文件
+# 输入参数：meminfo.txt
+# 输出文件：logs/csv/t_u.csv
+
 #根据dumpsys meminfo后的文件中不同的标签， 设定文件名
 #	因为标签诸如'.ttf mmap'等， 中间有空格， 不适合直接做文件名
 getMemFileName()
@@ -166,7 +170,7 @@ getCSVFile()
 
 # 第一列的所有参数
 MEMINFO_ARGS=("Native" "Dalvik" "Cursor" "Other dev"  "Ashmem" ".so mmap" ".jar mmap" ".apk mmap" ".ttf mmap" ".dex mmap" "Other mmap" "Unknown" "TOTAL:")
-# 从run.sh传入的4个参数
+# 从easy_monkey.sh传入的参数：内存文件meminfo.txt
 MEMINFO_File=${1}
 # MEMINFO_ARGS的长度(length)
 count=${#MEMINFO_ARGS[@]}
@@ -220,6 +224,3 @@ do
 	total_line=`tail -n $k logs/csv/t_u_bk.csv | head -n 1`
     echo "$total_line" >> logs/csv/t_u.csv
 done
-
-#删掉*meminfo.txt, 这里已经没用了, 省的占空间. 典型的卸磨杀驴有木有...
-#rm logs/*meminfo.txt

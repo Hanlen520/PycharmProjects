@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: Shengjie.Liu
-# Date: 2018-12-24
-# Version: 2.1
+# Date: 2019-01-14
+# Version: 3.0
 # Description: script of monkey
-# How to use: sh +x easy_monkey.sh <packagename> <extime>
+# How to use: sh +x easy_monkey.sh <packagename>
 
 init_data(){
     if [[ ! -d ${OUTPUT} ]]; then
@@ -134,6 +134,7 @@ echo "开始时间：`date "+%Y-%m-%d %H:%M:%S"`" | tee -a ${OUTPUT_RESULT}
 #--ignore-crashes --ignore-timeouts --ignore-security-exceptions \
 #-s 1024 --throttle 200 -v ${extime} 1>${CURRENT_OUTPUT}/monkey_log.txt 2>${CURRENT_OUTPUT}/error.txt
 
+# 调用python脚本，执行adb shell monkey命令，同时抓取cpu和memory的信息
 python monkey.py ${packagename}
 # restart adb server
 adb start-server
@@ -153,43 +154,39 @@ done
 # press home key in case of back key that didn't work
 adb shell input keyevent 3
 
-# log command
-#adb logcat -d -v time "${packagename}:V" > ${CURRENT_OUTPUT}/log.txt
-#adb logcat -d -v time > ${CURRENT_OUTPUT}/all_log.txt
-
-echo "正在获取CPU使用率..."
-
-# monkey跑完后的3、5、10分钟各取一次cpu值，超过40%可到内存脚本的输出文件夹里查看cpuinfo.txt文件以排查问题
+echo "正在获取内存TOTAL值和CPU使用率..."
+# monkey跑完后的3、5、10分钟各取一次cpu值，超过40%可到输出文件夹里查看allcpuinfo.txt文件以排查问题
 # process id
 pid=`getPid ${packagename}`
 # cpu kernel
 cpu_ker=`getCpuKer`
-# start dump cpn info
+# start dump cpn usage rate
 echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-#cpuinfo=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
 cpuinfo=`getCpuRate ${pid} ${cpu_ker}`
 echo ${cpuinfo} >> ${CPUINFO_FILE}
-# after 3minutes
-#sleep 180s
-sleep 3s
-echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-#cpuinfo3=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
-cpuinfo3=`getCpuRate ${pid} ${cpu_ker}`
-echo ${cpuinfo3} >> ${CPUINFO_FILE}
-# after 5minutes
-#sleep 120s
-sleep 5s
-echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-#cpuinfo5=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
-cpuinfo5=`getCpuRate ${pid} ${cpu_ker}`
-echo ${cpuinfo5} >> ${CPUINFO_FILE}
-# after 10minutes
-#sleep 300s
-sleep 10s
-echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
-#cpuinfo10=$(adb shell dumpsys cpuinfo | grep ${packagename} | head -n 1 | sed 's/ //g' | tr -d $'\r' | cut -d"%" -f 1)
-cpuinfo10=`getCpuRate ${pid} ${cpu_ker}`
-echo ${cpuinfo10} >> ${CPUINFO_FILE}
+#monkey跑完后的30分钟，记录内存TOTAL值
+int=0
+while(( $int<=29 ))
+do
+    case ${int} in
+    3)  echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
+        cpuinfo3=`getCpuRate ${pid} ${cpu_ker}`
+        echo ${cpuinfo3} >> ${CPUINFO_FILE}
+    ;;
+    5)  echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
+        cpuinfo5=`getCpuRate ${pid} ${cpu_ker}`
+        echo ${cpuinfo5} >> ${CPUINFO_FILE}
+    ;;
+    10)   echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> ${CPUTIME_FILE}
+          cpuinfo10=`getCpuRate ${pid} ${cpu_ker}`
+          echo ${cpuinfo10} >> ${CPUINFO_FILE}
+    ;;
+    esac
+    echo "TIME FLAG:"  `date "+%Y-%m-%d %H:%M:%S"` >> meminfo.txt
+    adb shell dumpsys meminfo ${packagename} >> meminfo.txt
+    sleep 60s
+    let "int++"
+done
 
 echo "CPU走势：${cpuinfo}%（monkey结束时）-> ${cpuinfo3}%（3分钟后）-> ${cpuinfo5}%（5分钟后）-> ${cpuinfo10}%（10分钟后）" \
 | tee -a ${OUTPUT_RESULT}
@@ -282,4 +279,4 @@ mv error.txt ${CURRENT_OUTPUT}
 mv monkey_log.txt ${CURRENT_OUTPUT}
 mv log.txt ${CURRENT_OUTPUT}
 mv meminfo.txt ${CURRENT_OUTPUT}
-
+mv allcpuinfo.txt ${CURRENT_OUTPUT}
