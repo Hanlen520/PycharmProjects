@@ -7,8 +7,8 @@
 # output file（MonkeyScripts）
 **/*.txt
 **/logs/
-MonkeyScripts_Local/buildtime
-MonkeyScripts_Local/mail_content
+**/buildtime
+**/mail_content
 
 **/.idea/
 **/output_cpuinfo/
