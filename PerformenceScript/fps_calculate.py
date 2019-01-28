@@ -9,7 +9,7 @@ import sys
 
 """
 adb shell dumpsys gfxinfo <package | pid>
-Draw + Prepare+Process + Execute = 完整显示一帧
+Draw + Prepare + Process + Execute = 完整显示一帧
 计算总数据的行数 frame_count = row_num
 计算每行渲染时间 render_time = Draw + Prepare + Process + Execute
 vsync_overtime_sum 超时帧的总数
