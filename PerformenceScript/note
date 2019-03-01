@@ -1,0 +1,5 @@
+获取当前窗口名：
+adb shell dumpsys window windows | grep mCurrent
+mCurrentFocus=Window{441c5af u0 com.color.phone.flash.caller.screen/com.color.phone.flash.caller.screen.activity.FlashLightHomeActivity}
+
+
