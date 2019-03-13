@@ -1,3 +1,5 @@
+# adb push monkey.script /sdcard/
+# adb shell monkey -f /sdcard/monkey.script -v 1
 # 启动测试
 type = user
 count = 49
