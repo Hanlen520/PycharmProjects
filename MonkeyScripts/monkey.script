@@ -1,0 +1,21 @@
+# 启动测试
+type = user
+count = 49
+speed = 1.0
+start data >>
+# 启动应用
+LaunchActivity(com.flashlight.brightest.beacon.torch,cootek.matrix.flashlight.activity.SplashActivity)
+UserWait(2000)
+# 点击
+Tap(544,1485,1000)
+UserWait(2000)
+# 输入
+#DispatchString(yyb)
+#UserWait(2000)
+# 点击设置menu
+Tap(943,1707,1000)
+UserWait(2000)
+# 关闭shake to turn on
+Tap(994,382,1000)
+# 点击返回键
+#DispatchPress(KEYCODE_BACK)
