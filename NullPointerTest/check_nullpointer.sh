@@ -3,6 +3,7 @@
 # Date: 2019-03-21
 # Version: 1.0
 # Description:  遍历Activity,检查空指针问题
+# How to use: sh +x check_nullpointer.sh
 
 if [[ -d "apkFile" ]]; then
     rm -r AC_list_filter Activity_List apkFile log.txt
