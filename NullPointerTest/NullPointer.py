@@ -1,50 +1,48 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
-import os,sys
+import os
+import sys
 import time
-#import commands
 import threading
 
 PATH = sys.path[0]
-#先判断设备是否连接
+PKG_NAME = sys.argv[1]
+
+# 先判断设备是否连接
 os.popen("adb wait-for-device")
 
-#判断包名
 
-
-#遍历文件获得activities 的值
+# 遍历文件获得activities 的值
 def CheckNullPoint():
-#Mac 下开启
-    # f = open(PATH+ "/" + "activities.txt","r")
-    f = open(PATH+ "/" + "Activity_List", "r")
+    f = open(PATH + "/" + "AC_list_filter", "r")
     for line in f.readlines():
-        os.popen("adb shell am start -n com.flashlight.brightest.beacon.torch/" + line)
-    print("adb shell am start -n com.flashlight.brightest.beacon.torch/" + line)
+        os.popen('adb shell am start -n %s/%s' % (PKG_NAME, line))
+        # print("adb shell am start -n %s/%s" % (PKG_NAME, line))
     time.sleep(3)
     f.close()
 
-#windows 下开启
-    # f = open(PATH+ "\\" + "activities.txt","r")
-#     for line in f.readlines():
-# #	print (line)
-#         os.popen("adb shell am start -n com.cootek.smartinputv5/" + line)
-#         print("adb shell am start -n com.com.cootek.smartinputv5/" + line)
-#         time.sleep(3)
-#     f.close()
 
 def CatLog():
-#Mac 下的命令行
-   os.popen("adb logcat >> ~/Desktop/TouchPal_nullpoint.log")
-#windows 下的命令行
-    # os.popen("adb logcat >> D:\\1TouchPal_nullpoint.log")
+    os.popen('adb logcat >> %s/log.txt' % PATH)
+
+
+def kill_adb():
+    os.popen('adb kill-server')
+
+
+def quit_app():
+    os.popen('adb shell input keyevent 4')
+
 
 t2 = threading.Thread(target=CatLog)
 t1 = threading.Thread(target=CheckNullPoint)
 t2.start()
 t1.start()
 t1.join()
-#num = commands.getstatusoutput("ps aux|grep adb|grep logcat|awk '{print $2}'")
-#os.popen("kill -9 %s"%num)
-#t2.join()
-#print (t1.isAlive())
-#print (t2.isAlive())
+
+print "Success"
+# back键退出应用
+for i in range(10):
+    quit_app()
+
+kill_adb()
