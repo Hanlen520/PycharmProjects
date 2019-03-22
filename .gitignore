@@ -1,6 +1,11 @@
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 
+# nullpointer file
+NullPointerTest/AC_list_filter
+NullPointerTest/Activity_List
+NullPointerTest/apkFile/
+
 # macOS file
 **/*.DS_Store
 
