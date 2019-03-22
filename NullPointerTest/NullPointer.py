@@ -34,15 +34,20 @@ def quit_app():
     os.popen('adb shell input keyevent 4')
 
 
-t2 = threading.Thread(target=CatLog)
-t1 = threading.Thread(target=CheckNullPoint)
-t2.start()
-t1.start()
-t1.join()
+def clear_log():
+    os.popen('adb logcat -c')
 
+
+clear_log()
+# t2 = threading.Thread(target=CatLog)
+# t1 = threading.Thread(target=CheckNullPoint)
+# t2.start()
+# t1.start()
+# t1.join()
+CheckNullPoint()
 print "Success"
 # back键退出应用
 for i in range(10):
     quit_app()
 
-kill_adb()
+# kill_adb()

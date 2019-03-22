@@ -1,5 +1,7 @@
 import xml.dom.minidom as minidom
 import sys
+
+
 def find_activities(filePath):
     xml = minidom.parse(filePath)
     root = xml.getElementsByTagName('manifest')
@@ -16,6 +18,8 @@ def find_activities(filePath):
     fs = open("Activity_List", 'w')
     fs.write(content)
     fs.close()
+
+
 if __name__ == '__main__':
     filePath = sys.argv[1]
     find_activities(filePath)
