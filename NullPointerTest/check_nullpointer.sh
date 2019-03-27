@@ -16,11 +16,12 @@ echo "Please enter the apk file address:"
 read apk_address
 # apk包名
 #pkg_name=$(aapt dump badging ${apk_address} | grep package: | sed 's/ //g' | tr -d $'\r' | cut -d"'" -f2)
-pkg_name=$(sed -n '1p' AndroidManifest.xml | awk '{for(i=1;i<=NF;i++){print $i;}}' | grep "package" | awk -F '"' '{print $2}')
 # 反编译
 apktool d ${apk_address} -o apkFile
 # 获取安卓manifest文件
 ANDROID_MANIFEST=${WORKSPACE}/apkFile/AndroidManifest.xml
+# 包名
+pkg_name=$(sed -n '1p' ${ANDROID_MANIFEST} | awk '{for(i=1;i<=NF;i++){print $i;}}' | grep "package" | awk -F '"' '{print $2}')
 # 通过FindActivity.py获取Activity列表
 python FindActivity.py ${ANDROID_MANIFEST}
 # 删除包含"loader.a.ActivityN1/loader.a.ActivityP0/loader.a.ActivityP1/loader.a.ActivityP2"的Activity
