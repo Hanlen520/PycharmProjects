@@ -37,7 +37,7 @@ def quit_app():
 def clear_log():
     os.popen('adb logcat -c')
 
-
+# 清空历史log
 clear_log()
 # t2 = threading.Thread(target=CatLog)
 # t1 = threading.Thread(target=CheckNullPoint)

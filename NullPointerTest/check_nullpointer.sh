@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Author: Shengjie.Liu
-# Date: 2019-03-21
-# Version: 1.0
+# Date: 2019-03-27
+# Version: 1.1
 # Description:  遍历Activity,检查空指针问题
 # How to use: sh +x check_nullpointer.sh
 
@@ -15,12 +15,8 @@ WORKSPACE=`pwd`
 echo "Please enter the apk file address:"
 read apk_address
 # apk包名
-pkg_name=$(aapt dump badging ${apk_address} | grep package: | sed 's/ //g' | tr -d $'\r' | cut -d"'" -f2)
-
-# 读取包名
-#echo "Please enter the package name:"
-#read pkg_name
-
+#pkg_name=$(aapt dump badging ${apk_address} | grep package: | sed 's/ //g' | tr -d $'\r' | cut -d"'" -f2)
+pkg_name=$(sed -n '1p' AndroidManifest.xml | awk '{for(i=1;i<=NF;i++){print $i;}}' | grep "package" | awk -F '"' '{print $2}')
 # 反编译
 apktool d ${apk_address} -o apkFile
 # 获取安卓manifest文件
