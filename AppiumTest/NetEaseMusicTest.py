@@ -8,29 +8,32 @@
 import unittest
 from appium import webdriver
 from time import sleep
-from UiHelper import UiHelper
 
 
 class SimpleNetEaseMusicTest(unittest.TestCase):
-    uiHelper = UiHelper(configPath="deviceConfig.txt")
     def setUp(self):
-        # uiHelper = UiHelper()
-        # to-do:创建初始条件，封装成方法调用
-        try:
-            uiHelper.initDriver()
-        except:
-            uiHelper.quitDriver()
+        desired_caps = {}
+        desired_caps['platformName'] = 'Android'
+        desired_caps['platformVersion'] = '8.0.0'
+        desired_caps['deviceName'] = 'CB512FCM14'
+        desired_caps['appPackage'] = 'com.netease.cloudmusic'
+        desired_caps['appActivity'] = 'com.netease.cloudmusic.activity.LoadingActivity'
+        desired_caps['newCommandTimeout'] = 150
+        desired_caps['noReset'] = True
+        desired_caps['unicodeKeyboard'] = True
+        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        sleep(10)
 
     def tearDown(self):
-        # uiHelper = UiHelper()
-        # to-do:case结束后还原操作
-        try:
-            uiHelper.quitDriver()
-            sleep(5)
-        except:
-            pass
+        self.driver.quit()
 
 
 class SimpleNetEaseMusicCase(SimpleNetEaseMusicTest):
-    # to-do:1、填写账号密码进入应用2、点击获取积分
-    pass
+    #每日签到
+    def test_Check(self):
+        menu = self.driver.find_element_by_id("com.netease.cloudmusic:id/p3")
+        menu.click()
+        check = self.driver.find_element_by_id("com.netease.cloudmusic:id/ad7")
+        check.click()
+
+
