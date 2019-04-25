@@ -34,6 +34,15 @@ class SimpleNetEaseMusicCase(SimpleNetEaseMusicTest):
         menu = self.driver.find_element_by_id("com.netease.cloudmusic:id/p3")
         menu.click()
         check = self.driver.find_element_by_id("com.netease.cloudmusic:id/ad7")
-        check.click()
+        if(check.text != "Checked in"):
+            check.click()
+        else:
+            self.driver.get_screenshot_as_file('/Users/liushengjie/Downloads/checked.png')
 
+    #验证已签到
+    def test_Check_Assert(self):
+        menu = self.driver.find_element_by_id("com.netease.cloudmusic:id/p3")
+        menu.click()
+        checkTitle = self.driver.find_element_by_id("com.netease.cloudmusic:id/ad7")
+        self.assertEqual(checkTitle.text, "Checked in")
 
