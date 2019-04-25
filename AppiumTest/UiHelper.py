@@ -9,6 +9,7 @@
 import unittest
 from appium import webdriver
 import logging
+from time import sleep
 
 class UiHelper(unittest.TestCase):
     remoteHost = ""
@@ -67,4 +68,25 @@ class UiHelper(unittest.TestCase):
             except:
                 element = parentElement.find_element_by_class_name(childElementInfo)
         return element
+
+    def waitForElement(self, elementInfo, period):
+        for i in range(period):
+            sleep(1)
+            try:
+                self.findElement(elementInfo)
+                return
+            except:
+                continue
+        raise Exception("Cannot find %s in %d seconds" % (elementInfo, period))
+
+    def checkElementIsEnabled(self, elementInfo):
+        element = self.findElement(elementInfo)
+        return element.get_attribute("enabled")
+
+    #to-do控件信息验证方法的封装:
+    #1.checkElementIsShown
+    #2.checkElementShownInParentElement
+    #3.checkElementIsSelected
+    #4.checkElementIsChecked
+
 
