@@ -3,7 +3,7 @@
 # @Author  : Shengjie.Liu
 # @Time    : 2019-04-25 10:25
 # @File    : UiHelper.py
-# @Desc    : 
+# @Desc    : Appium 方法封装类
 
 
 import unittest
@@ -12,6 +12,7 @@ import logging
 from time import sleep
 
 class UiHelper(unittest.TestCase):
+    #Appium 连接建立和断开的封装
     remoteHost = ""
     def __init__(self, configPath):
         self.desired_caps = {}
@@ -42,6 +43,7 @@ class UiHelper(unittest.TestCase):
         if(self._driver):
             self._driver.quit()
 
+    #控件查找方法的封装
     def findElement(self, controlInfo):
         element = ""
         if(controlInfo.startswith("//")):
@@ -69,6 +71,7 @@ class UiHelper(unittest.TestCase):
                 element = parentElement.find_element_by_class_name(childElementInfo)
         return element
 
+    #UI等待方法的封装
     def waitForElement(self, elementInfo, period):
         for i in range(period):
             sleep(1)
@@ -79,11 +82,12 @@ class UiHelper(unittest.TestCase):
                 continue
         raise Exception("Cannot find %s in %d seconds" % (elementInfo, period))
 
+    #控件信息验证方法的封装
     def checkElementIsEnabled(self, elementInfo):
         element = self.findElement(elementInfo)
         return element.get_attribute("enabled")
 
-    #to-do控件信息验证方法的封装:
+    #to-do:
     #1.checkElementIsShown
     #2.checkElementShownInParentElement
     #3.checkElementIsSelected
