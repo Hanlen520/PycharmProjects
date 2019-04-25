@@ -13,8 +13,9 @@ from time import sleep
 
 class UiHelper(unittest.TestCase):
     #Appium 连接建立和断开的封装
-    remoteHost = ""
+    # remoteHost = ""
     def __init__(self, configPath):
+        remoteHost = ""
         self.desired_caps = {}
         self._driver = None
         file_object = open(configPath)

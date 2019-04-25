@@ -7,16 +7,28 @@
 
 import unittest
 from appium import webdriver
+from time import sleep
+from UiHelper import UiHelper
 
 
 class SimpleNetEaseMusicTest(unittest.TestCase):
+    uiHelper = UiHelper(configPath="deviceConfig.txt")
     def setUp(self):
+        # uiHelper = UiHelper()
         # to-do:创建初始条件，封装成方法调用
-        pass
+        try:
+            uiHelper.initDriver()
+        except:
+            uiHelper.quitDriver()
 
     def tearDown(self):
+        # uiHelper = UiHelper()
         # to-do:case结束后还原操作
-        pass
+        try:
+            uiHelper.quitDriver()
+            sleep(5)
+        except:
+            pass
 
 
 class SimpleNetEaseMusicCase(SimpleNetEaseMusicTest):
