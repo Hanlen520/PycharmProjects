@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #进入网易云音乐，点击查询歌曲
-
+#monkeyrunner学习资料：https://developer.android.com/studio/test/monkeyrunner
 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice, MonkeyImage
 #MonkeyRunner.alert('Hello World', 'This is title', 'OK')
 #连接设备
