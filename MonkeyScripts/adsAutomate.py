@@ -87,10 +87,10 @@ def wifi_change():
 
 def main():
     #重复五次触发广告
-    for i in range(0, 5):
-        home()
-        hangup()
-        wifi_change()
+    # for i in range(0, 5):
+    home()
+    hangup()
+    wifi_change()
 
 
 if __name__ == '__main__':
