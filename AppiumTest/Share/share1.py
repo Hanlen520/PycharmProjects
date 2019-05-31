@@ -74,7 +74,7 @@ class share1(unittest.TestCase):
         self.driver.get_screenshot_as_file(self.SCREEN_SHOT_PATH + ss_name + timestamp + '.png')
 
     #登录网易云音乐
-    # @unittest.skip("skip test_login")
+    @unittest.skip("skip test_login")
     def test_login(self):
         dr = u"每日推荐"
         #登录页面-邮箱
@@ -109,7 +109,7 @@ class share1(unittest.TestCase):
 
 
     #退出账号
-    @unittest.skip("skip test_logout")
+    # @unittest.skip("skip test_logout")
     def test_logout(self):
         register_text = u"Register"
         try:

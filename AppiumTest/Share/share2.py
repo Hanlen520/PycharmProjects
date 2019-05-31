@@ -100,6 +100,7 @@ class share2(unittest.TestCase):
             d.click()
         except:
              self.get_screenshot("click_fail")
+        sleep(2)
         self.get_screenshot("click")
 
     #长按
@@ -114,6 +115,7 @@ class share2(unittest.TestCase):
             actions.perform()
         except:
              self.get_screenshot("long_click_fail")
+        sleep(2)
         self.get_screenshot("long_click")
 
 
@@ -128,6 +130,7 @@ class share2(unittest.TestCase):
             d.click()
         except:
              self.get_screenshot("back_fail")
+        sleep(2)
         self.get_screenshot("after_click")
         self.driver.keyevent(4)
         sleep(2)
