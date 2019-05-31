@@ -8,6 +8,8 @@ NullPointerTest/apkFile/
 
 #report
 AppiumTest/Share/my_report/
+#screenshot
+**/*.png
 
 # macOS file
 **/*.DS_Store
