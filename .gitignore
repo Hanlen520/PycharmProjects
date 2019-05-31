@@ -6,6 +6,9 @@ NullPointerTest/AC_list_filter
 NullPointerTest/Activity_List
 NullPointerTest/apkFile/
 
+#report
+AppiumTest/Share/my_report/
+
 # macOS file
 **/*.DS_Store
 
