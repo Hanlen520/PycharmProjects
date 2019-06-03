@@ -8,6 +8,7 @@ NullPointerTest/apkFile/
 
 #report
 AppiumTest/Share/my_report/
+AppiumTest/Share/cc_report/
 #screenshot
 **/*.png
 
