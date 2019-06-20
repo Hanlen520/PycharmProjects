@@ -28,9 +28,9 @@ class CalculatorTest(unittest.TestCase):
         #被测应用平台：iOS/Android
         desired_caps['platformName'] = 'Android'
         #被测应用平台版本：adb shell getprop ro.build.version.release
-        desired_caps['platformVersion'] = '8.0.0'
+        desired_caps['platformVersion'] = '5.1'
         #测试设备名：adb devices
-        desired_caps['deviceName'] = 'CB512FCM14'
+        desired_caps['deviceName'] = '03083025d0250909'
         #被测应用包名
         desired_caps['appPackage'] = 'weightloss.constellation.education.tools'
         #被测应用启动时的活动名
@@ -92,5 +92,5 @@ if __name__ == '__main__':
     # unittest.TextTestRunner(verbosity=2).run(suite)
 
     #运行case+输出报告
-    runner = HtmlTestRunner.HTMLTestRunner(output='cc_report')
+    runner = HtmlTestRunner.HTMLTestRunner(output='aa_report')
     runner.run(suite)
